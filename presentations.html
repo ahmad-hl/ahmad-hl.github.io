@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ahmad Alhilal · Invited Presentations & Talks</title>
+  <link rel="icon" href="ahmad_photo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      background: #f6fbfc;
+      font-family: 'Inter', sans-serif;
+      color: #11212e;
+      line-height: 1.5;
+    }
+    .navbar {
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,250,0.88);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0,150,160,0.2);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      font-family: 'Space Grotesk', monospace;
+      background: linear-gradient(120deg, #0f3b5c, #1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e4a5f;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color:#0f7c8c; border-bottom:2px solid #1f9eae; padding-bottom:4px; }
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 2rem 3rem; }
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0 1rem;
+      background: linear-gradient(135deg,#0a2f44,#1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 1rem;
+    }
+    .talk-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border: 1px solid #d9eef2;
+      transition: 0.2s;
+    }
+    .talk-card:hover {
+      transform: translateX(6px);
+      border-color: #9ad4df;
+    }
+    .talk-date {
+      display: inline-block;
+      background: #e2f0f3;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #116b7a;
+      margin-bottom: 0.8rem;
+    }
+    .talk-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0a2f44;
+      margin-bottom: 0.4rem;
+    }
+    .talk-venue {
+      font-size: 0.85rem;
+      color: #2a6b7a;
+      margin-bottom: 0.6rem;
+    }
+    .talk-desc {
+      font-size: 0.9rem;
+      color: #2c5f6e;
+      line-height: 1.4;
+    }
+    .icon { margin-right: 0.5rem; color: #1f9eae; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e4f2f5;
+      color: #1e5b66;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 0.6rem; }
+      .container { padding: 0 1.2rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo-container">
+        <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/28?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #1f9eae;">
+    	<span class="logo"> Ahmad Alhilal, PhD</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="publications.html">📄 Publications</a></li>
+    <li><a href="teaching.html">👨‍🏫 Teaching</a></li>
+    <li><a href="news.html">📰 News</a></li>
+    <li><a href="presentations.html">🎤 Presentations</a></li>
+    <li><a href="projects.html">🔬 Projects</a></li>
+    <li><a href="honors.html">🏆 Honors</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1 class="page-title">🎤 Invited presentations & talks</h1>
+  <div class="timeline">
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 1-4 Dec 2025</span>
+      <div class="talk-title">EyeNexus: Adaptive Gaze-Driven Quality and Bitrate Streaming for Seamless VR Cloud Gaming Experiences</div>
+      <div class="talk-venue">📍 HKUST, Hong Kong — The 21st International Conference on emerging Networking EXperiments and Technologies (CoNEXT'25) 2025</div>
+      <div class="talk-desc">Presented a conference paper on gaze-driven VR Streaming.</div>
+  </div>
+  <div class="timeline">
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 27-31 October 2025 </span>
+      <div class="talk-title">Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment</div>
+      <div class="talk-venue">📍 Dublin Ireland — The ACM Multimedia (MM'25) 2025</div>
+      <div class="talk-desc">Presented a conference paper on congestion control for VR Streaming.</div>
+  </div>
+  <div class="timeline">
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 18–22 July 2023</span>
+      <div class="talk-title">Network Traffic in the Metaverse: The Case of Social VR</div>
+      <div class="talk-venue">📍 Sheraton Hong Kong Hotel, Hong Kong — 2nd International Workshop on Social and Metaverse Computing and Networking (SocialMeta 2023)</div>
+      <div class="talk-desc">Presented workshop paper analyzing traffic patterns and QoE implications for social VR platforms.</div>
+    </div>
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 25–29 April 2022</span>
+      <div class="talk-title">Nebula: Reliable Low-latency Video Transmission for Mobile Cloud Gaming</div>
+      <div class="talk-venue">📍 Virtual Event, Lyon, France — The ACM Web Conference (WWW 2022)</div>
+      <div class="talk-desc">Presented novel congestion control and edge-assisted streaming framework for cloud gaming.</div>
+    </div>
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 3–4 August 2021</span>
+      <div class="talk-title">Edge-assisted Vehicular Computing towards Eco-safe Driving</div>
+      <div class="talk-venue">📍 Tokyo Institute of Technology — 12th Multidisciplinary International Student Workshop (MISW 2021)</div>
+      <div class="talk-desc">Invited talk on real-time abnormal driving detection using edge computing resources.</div>
+    </div>
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 7–10 July 2021</span>
+      <div class="talk-title">CAD3: Edge-facilitated Real-time Collaborative Abnormal Driving Distributed Detection</div>
+      <div class="talk-venue">📍 Virtual Event, Washington DC, USA — IEEE ICDCS 2021</div>
+      <div class="talk-desc">Presented collaborative edge framework for distributed abnormal driving detection.</div>
+    </div>
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 23–25 November 2019</span>
+      <div class="talk-title">Sustainable Multimodal Transport</div>
+      <div class="talk-venue">📍 Tokyo Institute of Technology, Japan — Asia-Oceania Top University League on Engineering (AOTULE)</div>
+      <div class="talk-desc">Keynote-style presentation on sustainable urban mobility and intelligent transport systems.</div>
+    </div>
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 14–18 September 2019</span>
+      <div class="talk-title">Age-friendly Mobility</div>
+      <div class="talk-venue">📍 RWTH Aachen University, Germany — IDEA League Summer School: Mobility Concepts 2030</div>
+      <div class="talk-desc">Presented research on inclusive mobility solutions for aging populations.</div>
+    </div>
+    <div class="talk-card" data-aos="fade-up">
+      <span class="talk-date"><i class="far fa-calendar-alt icon"></i> 15–19 September 2018</span>
+      <div class="talk-title">Realtime Abnormal Driving Activity Detection using Edge Computing</div>
+      <div class="talk-venue">📍 Tongji University, Shanghai, China — Mobile Networking, Analytics and Edge Computing Workshop 2018</div>
+      <div class="talk-desc">Early work on edge-assisted real-time driving anomaly detection.</div>
+    </div>
+  </div>
+</div>
+<footer><p>© 2025 Dr. Ahmad Alhilal — invited talks at international conferences, workshops and summer schools.</p></footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 500, once: true });</script>
+</body>
+</html>

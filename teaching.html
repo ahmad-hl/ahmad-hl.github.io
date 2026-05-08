@@ -1,228 +1,155 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ahmad Alhilal · Teaching & Mentorship</title>
+  <link rel="icon" href="ahmad_photo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      background: #f6fbfc;
+      font-family: 'Inter', sans-serif;
+      color: #11212e;
+      line-height: 1.5;
+    }
+    .navbar {
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,250,0.88);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0,150,160,0.2);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      font-family: 'Space Grotesk', monospace;
+      background: linear-gradient(120deg, #0f3b5c, #1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e4a5f;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color:#0f7c8c; border-bottom:2px solid #1f9eae; padding-bottom:4px; }
+    .container { max-width: 1300px; margin: 2rem auto; padding: 0 2rem 3rem; }
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0 1rem;
+      background: linear-gradient(135deg,#0a2f44,#1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+      border: 1px solid #d9eef2;
+    }
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #1f9eae;
+      padding-left: 1rem;
+    }
+    .entry {
+      margin-bottom: 1.3rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #e2edf0;
+    }
+    .title { font-weight: 700; font-size: 1rem; color: #0a2f44; }
+    .detail { font-size: 0.85rem; color: #2a6b7a; margin-top: 4px; }
+    .tag {
+      background: #e2f0f3;
+      display: inline-block;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      color: #146c7a;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e4f2f5;
+      color: #1e5b66;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 0.6rem; }
+      .container { padding: 0 1.2rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo-container">
+        <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/28?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #1f9eae;">
+    	<span class="logo"> Ahmad Alhilal, PhD</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="publications.html">📄 Publications</a></li>
+    <li><a href="teaching.html">👨‍🏫 Teaching</a></li>
+    <li><a href="news.html">📰 News</a></li>
+    <li><a href="presentations.html">🎤 Presentations</a></li>
+    <li><a href="projects.html">🔬 Projects</a></li>
+    <li><a href="honors.html">🏆 Honors</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1 class="page-title">📖 Teaching & Mentorship</h1>
+  
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">👨‍🏫 Lecturer</h2>
+    <div class="entry"><div class="title">CS-E4265 - Multimedia Systems Course</div><div class="detail"> <b>[Fall 2025, Fall 2026]:</b> Computer Science Department, Aalto University, Finland </div></div>
+    <div class="entry"><div class="title">Extended Reality: Systems, Principles and Design (Guest Lecturer)</div><div class="detail"><b>[March 2024]:</b> Division of Integrative Systems and Design, HKUST, Hong Kong </div></div>
+    <div class="entry"><div class="title">Introduction to Computer Systems</div><div class="detail"><b>[Feb 2016 – Jan 2017]:</b> Arab International University, Syria </div></div>
+  </div>
 
-<html>
-	<head>
-		<title>Alhilal's Teaching</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="files/ahmad_id_photo.ico">
-	</head>
-	<body class="is-preload">
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">🧑‍🏫 Teaching Assistant</h2>
+    <div class="entry"><div class="title">Hong Kong University of Science and Technology, Computer Science and Engineering (CSE)</div><div class="detail"> <b>[Fall 2018 - Spring 2021]:</b> Java Programming (COMP 3021) – Spring 2021 · Database Management Systems (COMP 3311) – Spring 2020 · Mobile App Development (COMP4521) – Spring 2019 · Intro to Computing with Excel VBA (COMP 1022Q) – Fall 2018</div></div>
+    <div class="entry"><div class="title">Arab International University</div><div class="detail"> <b>[Fall 2015-Fall 2017]:</b> Information System Security (Fall 2015) · Computer Networks (Fall 2015) · Computer Systems (Spring 2016, Fall 2016, Fall 2017)</div></div>
+    <div class="entry"><div class="title">Faculty of Information Technology and Engineering, Damascus University</div><div class="detail"> <b>[Fall 2013 - Fall 2016]:</b> Programming Languages (Fall 2013), Information System Security (Fall 2014), Network Security (Spring 2013,2014,2015) </div></div>
+  </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="teaching.html" class="logo"><strong> Ahmad ALHILAL's</strong> Teaching Experience</a>
-									<ul class="icons">
-										<li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Hong Kong</li>
-										<li><a href="https://ahmad-hl.github.io/"><span class="label"><i style='font-size:24px' class='fas'>&#xf406;</i></span></a></li>
-										<li><a href="https://github.com/ahmad-hl" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="https://www.linkedin.com/in/ahmedhlal/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://scholar.google.com/citations?hl=en&user=XniyjjEAAAAJ&sortby=pubdate" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
-									</ul>
-								</header>
-
-							<!-- Content -->
-								<section>
-
-
-									<h2>Lecturer</h2> <br>
-									<h4> Computer Science Department, Aalto University, Finland </h4>
-									<ul>
-										<li> [Sep-Dec 2025] CS-E4265 - Multimedia Systems</li>
-									</ul>
-									<h4> Hong Kong University of Science and Technology, Hong Kong </h4>
-									<ul>
-										<li> [March 2024] Guest Lecturer of the course of Extended Reality: Systems, Principles and Design</li>
-									</ul>
-									<h4> Arab International University, Damascus, Syria </h4>
-									<ul>
-										<li> [Feb 2016 - Jan 2017] Lecturer of the course of Introduction to Computer Systems</li>
-									</ul>
-									<hr class="major" />
-
-									<h2>Teaching Assistant</h2> <br>
-									<h4> Computer Science Engineering, Hong Kong University of Science and Technology (HKUST)</h4>
-									<ol>
-										<li> [COMP 3021 (L1)] Java Programming -- [Spring 2021]</li>
-										<li> [COMP 3311 (L1)] Database Management Systems -- [Spring 2020]</li>
-										<li> [COMP COMP4521 (L1)] Mobile Application Development -- [Spring 2019]</li>
-										<li> [COMP 1022Q] Introduction to Computing with Excel VBA -- [Fall 2018] </li>
-										<li> [COMP 3311 (L1)] Database Management Systems -- [Spring 2020]</li>
-									</ol>
-									
-									<hr class="major" />
-									
-									<h4> Faculty of Information Technology Engineering, Arab International University, Damascus, Syria </h4>
-									<ol>
-										<li> Information System Security -- [Fall 2015]</li>
-										<li> Computer Networks -- [Fall 2015]</li>
-										<li> Computer Systems -- [Spring 2016, Fall 2016, Fall 2017]</li>
-									</ol>
-									<h4> Faculty of Information Technology Engineering, Damascus University </h4>
-									<ol>
-										<li> Programing Languages (Java) -- [Fall 2013]</li>
-										<li> Information System Security -- [Fall 2014]</li>
-										<li> Network Security -- [Spring 2013, 2014, 2015]</li>
-										<li> Supervising many groups of FYP students 2014-2016</li>
-									</ol>
-
-									<hr class="major" />
-										<h2>
-												<b>Mentorship and Co-supervision</b>:
-										</h2>
-										<p>
-											<h3>
-												<b>[2020 - present]: Mentorship of UROP/Interns, MPhil & PHD at HKUST</b>:
-											</h3>
-										    <ul>
-												<li> PhD: LAM Kit Yung (Embodied Human Interaction in XR)</li>
-												<li> PhD: CHEUNG Clarence (Deception in VR)</li>
-												<li> PhD: YANG Liang (Interoperability in Metaverse)</li>
-												<li> PhD: WANG Xuetong (VR Sketching)</li>
-												<li> PhD: WU Ze (Network-aware Streaming for VR Gaming)</li>
-												<li> PhD: TSUI Yuk Hang (ML & Computer Vision in VR)</li>
-												<li> PhD: Simin YANG (Generative AI for Generated Spaces)</li>
-											</ul>
-											<ul>
-												<li> MPhil: PARK Chun Ho (Visual Localization)</li>
-												<li> MPhil: SON Juhyung (VR Lab for CENG)</li>
-											</ul>
-											<ul>
-												<li> Final Year Thesis (FYT): CHAN Kei Chi (Cloud Computing on Smartphones)</li>
-												<li> UROP: WU Ze (VR Streaming for Cloud Gaming)</li>
-												<li> UROP: HAN Yoonseo (Cloud Computing on Smartphones)</li>
-												<li> Intern: Kriti Agrawal (Deception in VR)</li>
-											</ul>
-
-											<h3>
-												<b>[2014 - 2016]: Mentorship & co-supervision of FYP Undergrad projects at Damascus University </b>:
-											</h3>
-											<ul>
-												<li> Final Year Project (FYP): 5 students' groups on Network Security projects</li>
-												<li> Final Year Project (FYP): 4 students' groups on Network applications</li>
-											</ul>
-										</p>
-								</section>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<div id="sidebar">
-					<div class="inner">
-
-						<!-- Search -->
-							<section id="search" class="alt">
-								<form method="post" action="#">
-									<input type="text" name="query" id="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<li><a href="publications.html">Publications</a></li>
-									<li><a href="teaching.html">Teaching</a></li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="conferences.html">Presentations</a></li>
-									<li><a href="projects.html">Projects</a></li>
-									<li><a href="honors.html">Honors & Awards</a></li>
-<!--									<li><a href="resources.html">Resources</a></li>-->
-<!--									<li><a href="resume.html">Resume</a></li>-->
-								</ul>
-							</nav>
-
-						<!-- Section -->
-						<section>
-							<header class="major">
-								<h2>Video Gallery</h2>
-							</header>
-							<div class="mini-posts">
-								<article>
-									<video width="280" height="190" src="videos/FovOptix.mp4" title="Demo FovOptix" controls></video>
-									<p>Demo of FovOptix: Human Vision Compatible Video Compression in VR Cloud Gaming <br>
-									<a href="https://2024.acmmmsys.org/">The 15th ACM Multimedia Systems Conference </a>
-									</p>
-								</article>
-								<article>
-									<img align="center" src="files/SocialMeta_1.jpg" alt="" width="90%" height="90%"/>
-									<p style="padding-left: 5px">The 2nd International Workshop on Social and Metaverse Computing and Networking</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/acmm.hai.mp4" title="Demo MetaHKUST" controls></video>
-									<p>Demo of Human-Avatar Interaction in Metaverse: Framework for Full-Body Interaction</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/metaustDemo.mp4" title="Demo MetaHKUST" controls></video>
-									<p>Demo of our first prototype of MetaHKUST Virtual Classroom</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/MetUST.HAI.mp4" title="MetaHKUST" controls></video>
-									<p>Human-Avatar Interaction, Presentation in Press Conference on Metaverse (MetaHKUST)</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/metahkust.mp4" title="MetaHKUST" controls></video>
-									<p>Virtual Opening Ceremony of Ghuanghzou Campus on MetaHKUST</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/icdcs21_video.mp4" title="Presentation of CAD3 in ICDCS21" controls></video>
-									<p>Presentation of CAD3 in ICDCS 2021</p>
-								</article>
-								<article>
-									<img align="center" src="files/pressconf.metaust.jpg" alt="" width="90%" height="90%"/>
-									<p style="padding-left: 5px">Leading, Dev&tech team for first press conference in the Metaverse.</p>
-								</article>
-							</div>
-							<!-- For more video button -->
-							<!-- <ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul> -->
-						</section>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Get in touch</h2>
-								</header>
-								<p>Feel free to contact me:</p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">ahmad.alhilal[AT]aalto[dot]fi</a></li>
-									<li class="icon solid fa-home">Pihlajatie 3, Helsinki, Finland</li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-							</footer>
-
-					</div>
-				</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">🎓 Advisory & Mentorship </h2>
+    <div class="entry"><div class="title">PhD Candidates</div><div class="detail"> <b>[HKUST, Hong Kong]:</b> LAM Kit Yung (Embodied Human Interaction in XR), CHEUNG Clarence (Deception in VR), YANG Liang (Interoperability in Metaverse), WANG Xuetong (VR Sketching), WU Ze (Network-aware Streaming for VR Gaming), TSUI Yuk Hang (ML & Computer Vision in VR), Simin YANG (Generative AI for Generated Spaces)</div></div>
+    <div class="entry"><div class="title">Master's Thesis</div><div class="detail"><b>[Aalto University, Finland]:</b> Marko Pekkola (streamable 3D scenes), Huang Yaojun (distributed renderering)  </div></div>
+    <div class="entry"><div class="title">MPhil & UROP / Interns</div><div class="detail"><b>[HKUST, Hong Kong]:</b> PARK Chun Ho (MPhil on Visual Localization), SON Juhyung (MPhil on VR Lab), WU Ze (UROP project), HAN Yoonseo (UROP project), Kriti Agrawal (Intern), CHAN Kei Chi (FYP on Cloud Computing on Smartphones)</div></div>
+    <div class="entry"><div class="title">Final Year Projects</div><div class="detail"> <b>[Damascus University, 2014 - 2016]:</b> Supervising Final year projects on Network Security and Network Applications projects</div></div>
+  </div>
+</div>
+<footer><p>© 2025 Dr. Ahmad Alhilal — committed to shaping next-gen researchers in XR, edge & streaming systems.</p></footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
+</body>
 </html>

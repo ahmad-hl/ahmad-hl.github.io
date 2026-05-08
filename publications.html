@@ -1,410 +1,190 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Alhilal's Publications</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="files/ahmad_id_photo.ico">
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ahmad Alhilal · Full Publications</title>
+  <link rel="icon" href="ahmad_photo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      background: #f6fbfc;
+      font-family: 'Inter', sans-serif;
+      color: #11212e;
+      line-height: 1.5;
+    }
+    .navbar {
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,250,0.88);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0,150,160,0.2);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      font-family: 'Space Grotesk', monospace;
+      background: linear-gradient(120deg, #0f3b5c, #1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e4a5f;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color:#0f7c8c; border-bottom:2px solid #1f9eae; padding-bottom:4px; }
+    .container { max-width: 1300px; margin: 2rem auto; padding: 0 2rem 3rem; }
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0 1rem;
+      background: linear-gradient(135deg,#0a2f44,#1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+      border: 1px solid #d9eef2;
+      transition: 0.2s;
+    }
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #1f9eae;
+      padding-left: 1rem;
+    }
+    .pub-entry {
+      margin-bottom: 1.3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e2edf0;
+    }
+    .pub-title { font-weight: 700; font-size: 1rem; color: #0a2f44; }
+    .venue { font-size: 0.85rem; color: #2a6b7a; margin-top: 6px; }
+    .links { margin-top: 6px; font-size: 0.8rem; }
+    .links a { color: #1f9eae; text-decoration: none; margin-right: 1rem; font-weight: 500; }
+    .links a:hover { text-decoration: underline; }
+    .tag {
+      background: #e2f0f3;
+      display: inline-block;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      color: #146c7a;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e4f2f5;
+      color: #1e5b66;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 0.6rem; }
+      .container { padding: 0 1.2rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo-container">
+        <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/28?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #1f9eae;">
+    	<span class="logo"> Ahmad Alhilal, PhD</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="publications.html">📄 Publications</a></li>
+    <li><a href="teaching.html">👨‍🏫 Teaching</a></li>
+    <li><a href="news.html">📰 News</a></li>
+    <li><a href="presentations.html">🎤 Presentations</a></li>
+    <li><a href="projects.html">🔬 Projects</a></li>
+    <li><a href="honors.html">🏆 Honors</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1 class="page-title">📄 Complete list of publications</h1>
+  
+  <!-- PEER-REVIEW CONFERENCES (full) -->
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">Peer-Review Conferences</h2>
+    
+    <div class="pub-entry"><div class="pub-title">FovRL: Joint Foveation and Quality Control for Immersive VR Streaming Using Reinforcement Learning <br> </div><div class="venue">  Yuk Hang Tsui, Ze Wu, Ahmad Alhilal, Matti Siekkinen, Pan Hui <br> The ACM on Web Conference, April 2026  — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Frame Complexity-Aware Foveated Video Encoding for Real-time High-Quality Streaming <br> </div><div class="venue">Ze Wu, Ahmad Alhilal, Yuk Hang Tsui, Matti Siekkinen, Pan Hui <br> IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR '26), Daegu, Korea, March 2026 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Enhancing Creativity in Virtuality: How Annotations in Creative Support Tool Innovate Design Ideation in Virtual Reality <br> </div><div class="venue">Xuetong Wang, Ching Christie Pang, Zhen Wu, Ahmad Alhilal, Simin Yang, Tristan Braud, Pan Hui <br> IEEE VR '26, Korea, March 2026 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">EyeNexus: Adaptive Gaze-Driven Quality and Bitrate Streaming for Seamless VR Cloud Gaming Experiences <br> </div><div class="venue">Ze Wu, Ahmad Alhilal, Yuk Hang Tsui, Matti Siekkinen, Pan Hui <br> The 21th International Conference on emerging Networking EXperiments and Technologies (CoNEXT), 2025 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment <br> </div><div class="venue">Ahmad Alhilal, Ze Wu, Teemu Kämäräinen, Tristan Braud, Matti Siekkinen <br> The 33rd ACM International Conference on Multimedia (ACM MM), 2025 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Gaze-Adaptive Foveation for Remote Rendered VR <br> </div><div class="venue">Adhi Widagdo, Teemu Kämäräinen, Ahmad Alhilal, Matti Siekkinen, Cheng-Hsin Hsu <br> The 33rd ACM International Conference on Multimedia (ACM MM), 2025 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Performance Profiling of Federated Learning Across Heterogeneous Mobile Devices <br> </div><div class="venue">José A Esquivel, Bradley Aldous, Ahmed M Abdelmoniem, Ahmad Alhilal, Linlin You <br> 2024 IEEE 24th International Conference on Software Quality, Reliability, and Security Companion (QRS-C) — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">From Prompt to Metaverse: User Perceptions of Personalized Spaces Crafted by Generative AI <br> </div><div class="venue">Simin Yang, Yuk Hang Tsui, Xian Wang, Ahmad Alhilal, Reza Hadi Mogavi, Xuetong Wang, Pan Hui <br> The 27th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW'24), 2024 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">The Jade Gateway to Exergaming: How Socio-Cultural Factors Shape Exergaming Among East Asian Older Adults <br> </div><div class="venue">Reza Hadi Mogavi, Juhyung Son, Simin YANG, Derrick M. Wang, Lydia Choong, Ahmad Alhilal, Pengyuan Zhou, Pan Hui, Lennart E. Nacke <br> CHI Play 2024 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">FovOptix: Human Vision-Compatible Video Encoding and Adaptive Streaming in VR Cloud Gaming <br> </div><div class="venue">Ahmad Alhilal, Ze Wu, Yuk Hang Tsui, Pan Hui <br> The ACM Multimedia Systems Conference (MMSys '24) — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">SimLab: Bridging the Gap between Theory and Practice in Chemical Engineering Education through a Metaverse Simulation <br> </div><div class="venue">Juhyung Son, Ahmad Alhilal (co-first author), Reza Hadi Mogavi, Tristan Braud, Pan Hui <br> The HCI International Conference (HCII 2024) — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">AnchorLoc: Large-scale, Real-Time Visual Localization through Anchor Extraction and Detection <br> </div><div class="venue">Chun Ho Park, Ahmad Alhilal, Tristan Braud, Pan Hui <br> The 22nd International Conference on Pervasive Computing and Communications (PerCom 2024) — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">QoE Optimization for VR Streaming: a Continual RL Framework in Digital Twin-empowered MEC <br> </div><div class="venue">Jiadong Yu, Ahmad Alhilal, Tailin ZHOU, Pan Hui, Danny Tsang <br> IEEE Global Communications (GLOBECOM) 2023 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Human-Avatar Interaction in Metaverse: Framework for Full-body Interaction <br> </div><div class="venue">Kit Yung LAM, Liang Wang, Ahmad Alhilal, Lik-Hang Lee, Gareth Tyson, Pan Hui <br> ACM Multimedia Asia 2022 — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse <br> </div><div class="venue">Lik-Hang Lee, Calos Bermejo, Ahmad Alhilal, Tristan Braud, Simo Hosio, ESMÉE DE HAAS, Pan Hui <br> The 24th ACM International Conference on Multimodal Interaction (ICMI'22) — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">Nebula: Reliable Low-latency Video Transmission for Mobile Cloud Gaming <br> </div><div class="venue">Ahmad Alhilal, Tristan Braud, Bo Han, Pan Hui <br> The ACM Web Conference 2022 (WWW 2022) — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">TALARIA: In-engine Synchronisation for Seamless Migration of Mobile Edge Gaming Instance <br> </div><div class="venue">Tristan Braud, Ahmad Alhilal, Pan Hui <br> The 17th International Conference on emerging Networking EXperiments and Technologies (CoNext 2021) — <a href="#">Link</a> </div></div>
+    <div class="pub-entry"><div class="pub-title">CAD3: Edge-facilitated Real-time Collaborative Abnormal Driving Distributed Detection <br> </div><div class="venue">Ahmad Alhilal, Tristan Braud, Xiang Su, Luay Al Asadi, Pan Hui <br> The 41st IEEE International Conference on Distributed Computing Systems (ICDCS 2021) — <a href="#">Link</a> </div></div>
+  </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- JOURNALS full list -->
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">Peer-Review Journals</h2>
+    <div class="pub-entry"><div class="pub-title">Saliency-Guided Foveated Video Encoding for Low-Latency and Immersive Cloud VR <br> </div><div class="venue">Ze Wu, Ahmad Alhilal, Yuk Hang Tsui, Wen Jye Chai, Matti Siekkinen, Pan Hui <br> IEEE Transactions on Visualization and Computer Graphics (IEEE TVCG), 2026 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Vetaverse: Technologies, Applications, and Visions toward the Intersection of Metaverse, AI, Vehicles, and Transportation Systems <br> </div><div class="venue">Peng Yuan Zhou, Jinjing Zhu, Yiting Wang, Yunfan Lu, Zixiang Wei, Haolin Shi, Yuchen Ding, Yu Gao, Qinglong Huang, Yan Shi, Ahmad Alhilal, Lik-Hang Lee, Tristan Braud, Pan Hui, Lin Wang <br> IEEE Transactions on Artificial Intelligence, Nov 2025 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Attention-based QoE-aware Digital Twin Empowered Edge Computing for Immersive Virtual Reality <br> </div><div class="venue">Jiadong Yu, Ahmad Alhilal, Tailin Zhou, Pan Hui, Danny Tsang <br> IEEE Transactions on Wireless Communications, March 2024 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Bi-directional Digital Twin and Edge Computing in the Metaverse <br> </div><div class="venue">Jiadong Yu, Ahmad Alhilal (co-first author), Pan Hui, Danny Tsang <br> IEEE Internet of Things Magazine, May 2024 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Towards a Traffic Metaverse with Shared Vehicle Perception <br> </div><div class="venue">Ahmad Alhilal, Tristan Braud, Lik-Hang Lee, Hang Chen, Pan Hui <br> IEEE Communications Standards Magazine, Oct 2023 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">DiOS-An Extended Reality Operating System for the Metaverse <br> </div><div class="venue">Tristan Braud, Lik-Hang Lee, Ahmad Alhilal, Carlos Bermejo Fernández, Pan Hui <br> IEEE MultiMedia Magazine, Oct 2022 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Street Smart in 5G: Vehicular Applications, Communication <br> </div><div class="venue">Ahmad Alhilal, Tristan Braud, Benjamin Finley, Dongzhe Su, Pan Hui <br> IEEE ACCESS, Sep 2022 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">A Roadmap Towards a Unified Space Communication Architecture <br> </div><div class="venue">Ahmad Alhilal, Tristan Braud, Pan Hui <br> IEEE ACCESS, July 2021 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">The Sky is NOT the Limit Anymore: Future Architecture of the Interplanetary Internet <br> </div><div class="venue">Ahmad Alhilal, Tristan Braud, Pan Hui <br> IEEE Aerospace and Electronic Systems Magazine, August 2019 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Evaluation of WSN hierarchical routing protocols according to energy efficiency heterogeneity levels <br> </div><div class="venue">Ahmad Alhilal, Salah Dowaji <br> International Review on Computers and Software (IRECOS) — <a href="#">Link</a></div></div>
+  </div>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-							<header id="header">
-								<a href="publications.html" class="logo"><strong>Ahmad ALHILAL's </strong> Publications</a>
-								<ul class="icons">
-									<li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Hong Kong</li>
-									<li><a href="https://ahmad-hl.github.io/"><span class="label"><i style='font-size:24px' class='fas'>&#xf406;</i></span></a></li>
-									<li><a href="https://github.com/ahmad-hl" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									<li><a href="https://www.linkedin.com/in/ahmedhlal/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://scholar.google.com/citations?hl=en&user=XniyjjEAAAAJ&sortby=pubdate" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
-								</ul>
-							</header>
-
-							<!-- Content -->
-								<section>
-									<!-- <span class="image main"><img src="images/pic11.jpg" alt="" /></span> -->
-
-									You can also find my articles on my Google 
-									<a href="https://scholar.google.com/citations?hl=en&user=XniyjjEAAAAJ&sortby=pubdate", target="_blank">Google Scholar</a> profile.
-
-									<hr class="major" />
-
-									<div class="media">
-										<header>
-											<h2> Publications in Peer-Review Conferences</h2>
-										</header>
-										<ol>
-											<li>
-												<b> FovRL: Joint Foveation and Quality Control for Immersive VR Streaming Using Reinforcement Learning </b><br>
-												Yuk Hang Tsui, Ze Wu, <b><u>Ahmad Alhilal</u></b>, Matti Siekkinen, Pan Hui<br>
-												<i style = "font-size: 14px">The ACM on Web Conference. April 2026</i>  |  <a href="#" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Frame Complexity-Aware Foveated Video Encoding for Real-time High-Quality Streaming </b><br>
-												Ze Wu, <b><u>Ahmad Alhilal</u></b>, Yuk Hang Tsui, Matti Siekkinen, Pan Hui<br>
-												<i style = "font-size: 14px">IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR '26), Daegu, Korea, March, 2026</i>  |  <a href="#" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Enhancing Creativity in Virtuality: How Annotations in Creative Support Tool Innovate Design Ideation in Virtual Reality </b><br>
-												Xuetong Wang, Ching Christie Pang, Zhen Wu, <b><u>Ahmad Alhilal</u></b>, Simin Yang, Tristan Braud, and Pan Hui<br>
-												<i style = "font-size: 14px">IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR '26), Daegu, Korea, March, 2026</i>  |  <a href="#" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>EyeNexus: Adaptive Gaze-Driven Quality and Bitrate Streaming for Seamless VR Cloud Gaming Experiences</b><br>
-												Ze Wu, <b><u>Ahmad Alhilal</u></b>, Yuk Hang Tsui, Matti Siekkinen, Pan Hui<br>
-												<i style = "font-size: 14px">The 21th International Conference on emerging Networking EXperiments and Technologies, 2025</i>  |  <a href="https://dl.acm.org/doi/abs/10.1145/3768989" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment</b><br>
-												<b><u>Ahmad Alhilal</u></b>, Ze Wu, Teemu Kämäräinen, Tristan Braud, Matti Siekkinen<br>
-												<i style = "font-size: 14px">The 33rd ACM International Conference on Multimedia (2025)</i>  |  <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755439" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Gaze-Adaptive Foveation for Remote Rendered VR</b><br>
-												Adhi Widagdo, Teemu Kämäräinen, <b><u>Ahmad Alhilal</u></b>, Matti Siekkinen, Cheng-Hsin Hsu<br>
-												<i style = "font-size: 14px">The 33rd ACM International Conference on Multimedia (2025)</i>  |  <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3755620" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Performance Profiling of Federated Learning Across Heterogeneous Mobile Devices</b><br>
-												José A Esquivel, Bradley Aldous, Ahmed M Abdelmoniem, <b><u>Ahmad Alhilal</u></b>, Linlin You<br>
-												<i style = "font-size: 14px">2024 IEEE 24th International Conference on Software Quality, Reliability, and Security Companion (QRS-C)</i>  |  <a href="https://ieeexplore.ieee.org/abstract/document/10727078/" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-
-											<li>
-												<b>From Prompt to Metaverse: User Perceptions of Personalized Spaces Crafted by Generative AI</b><br>
-												Simin Yang,  Yuk Hang Tsui, Xian Wang, <b><u>Ahmad Alhilal</u></b>, Reza Hadi Mogavi, Xuetong Wang, and Pan Hui<br>
-												<i style = "font-size: 14px">The 27th ACM Conference on Computer-Supported Cooperative Work and Social Computing 2024 (CSCW'24)</i>  |  <a href="https://dl.acm.org/doi/10.1145/3678884.3681897" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>  The Jade Gateway to Exergaming: How Socio-Cultural Factors Shape Exergaming Among East Asian Older Adults</b><br>
-												Reza Hadi Mogavi, Juhyung Son, Simin YANG, Derrick M. Wang, Lydia Choong, <b><u>Ahmad Alhilal</u></b>, Pengyuan Zhou, Pan Hui, and Lennart E. Nacke<br>
-												<i style = "font-size: 14px">CHI Play 2024</i>   |  <a href="https://dl.acm.org/doi/abs/10.1145/3677106" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>  FovOptix: Human Vision-Compatible Video Encoding and Adaptive  Streaming in VR Cloud Gaming</b><br>
-												<b><u>Ahmad Alhilal</u></b>, Ze Wu, Yuk Hang Tsui and Pan Hui<br>
-												<i style = "font-size: 14px"> The ACM Multimedia Systems Conference (MMSys '24)</i> |  <a href="https://dl.acm.org/doi/10.1145/3625468.3647612" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b> SimLab: Bridging the Gap between Theory and Practice in Chemical Engineering Education through a Metaverse Simulation</b><br>
-												Juhyung Son, <b><u>Ahmad Alhilal</u> (co-first author)</b>, Reza Hadi Mogavi, Tristan Braud and Pan Hui<br>
-												<i style = "font-size: 14px">The HCI International Conference (HCII 2024)</i>  |  <a href="https://link.springer.com/chapter/10.1007/978-3-031-60692-2_12" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b> AnchorLoc: Large-scale, Real-Time Visual Localization through Anchor Extraction and Detection</b><br>
-												Chun Ho Park, <b><u>Ahmad Alhilal</u></b>, Tristan Braud and Pan Hui<br>
-												<i style = "font-size: 14px">The 22nd International Conference on Pervasive Computing and Communications (PerCom 2024)</i> |  <a href="https://ieeexplore.ieee.org/abstract/document/10494441" target="_blank" style = "font-size: 14px">Link</a>
-
-												<br><br>
-											</li>
-											<li>
-												<b> QoE Optimization for VR Streaming: a Continual RL Framework in Digital Twin-empowered MEC</b><br>
-												Jiadong Yu, <b><u>Ahmad Alhilal</u></b>, Tailin ZHOU, Pan Hui, Danny Tsang<br>
-												<i style = "font-size: 14px">IEEE Global Communications (GLOBECOM) 2023 Conference</i>  |  <a href="https://ieeexplore.ieee.org/abstract/document/10437100" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b> Human-Avatar Interaction in Metaverse: Framework for Full-body Interaction</b><br>
-												Kit Yung LAM, Liang Wang, <b><u>Ahmad Alhilal</u></b>, Lik-Hang Lee, Gareth Tyson, Pan Hui <br>
-												<i style = "font-size: 14px"> ACM Multimedia Asia 2022 </i>  | <a href="https://dl.acm.org/doi/abs/10.1145/3551626.3564936" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b> Beyond the Blue Sky of Multimodal Interaction: A Centennial Vision of Interplanetary Virtual Spaces in Turn-based Metaverse</b><br>
-												Lik-Hang Lee, Calos Bermejo, <b><u>Ahmad Alhilal</u></b>, Tristan Braud, Simo Hosio, ESMÉE DE HAAS, Pan Hui <br>
-												<i style = "font-size: 14px">The 24th ACM International Conference on Multimodal Interaction (ICMI'22)  </i> |
-												<a href="https://dl.acm.org/doi/abs/10.1145/3536221.3558174" target="_blank" style = "font-size: 14px"> Link </a>
-												<br> <br>
-											</li>
-											<li>
-												<b>Nebula: Reliable Low-latency Video Transmission for Mobile Cloud Gaming</b><br>
-												<b><u>Ahmad Alhilal</u></b>,Tristan Braud, Bo Han and Pan Hui<br>
-												<i align="center" style = "font-size: 14px">The ACM Web Conference 2022 (WWW 2022) |
-													<a href="https://dl.acm.org/doi/10.1145/3485447.3512276" target="_blank" style = "font-size: 14px"> Link </a> </i>
-												<br><br>
-											</li>
-											<li>
-												<b>TALARIA: In-engine Synchronisation for Seamless Migration of Mobile Edge Gaming Instance</b><br>
-												Tristan Braud,<b><u>Ahmad Alhilal</u></b>, and Pan Hui<br>
-												<i style = "font-size: 14px">The 17th International Conference on emerging Networking EXperiments and Technologies (CoNext 2021)</i>
-												| <a href="https://dl.acm.org/doi/abs/10.1145/3485983.3494848" target="_blank" style = "font-size: 14px"> Link </a>
-												<br><br>
-											</li>
-											<li>
-												<b>CAD3: Edge-facilitated Real-time Collaborative Abnormal Driving Distributed Detection</b><br>
-												<b><u>Ahmad Alhilal</u></b>,Tristan Braud, Xiang Su, Luay Al Asadi and Pan Hui<br>
-												<i style = "font-size: 14px">The 41st IEEE International Conference on Distributed Computing Systems (ICDCS 2021)</i>
-												| <a href="https://ieeexplore.ieee.org/document/9546460" target="_blank" style = "font-size: 14px">Link</a>
-												| <a href="files/icdcs21_slides.pdf" target="_blank" style = "font-size: 14px">Slides</a>
-											</li>
-										</ol>
-
-										<hr class="major" />
-										<header>
-											<h2> Publications in Peer-Review Journals</h2>
-										</header>
-										<ol>
-											<li>
-												<b>Saliency-Guided Foveated Video Encoding for Low-Latency and Immersive Cloud VR</b><br>
-												Ze Wu, <b><u>Ahmad Alhilal</u></b>, Yuk Hang Tsui, Wen Jye Chai, Matti Siekkinen, Pan Hui<br>
-												<i style = "font-size: 14px">IEEE Transactions on Visualization and Computer Graphics (IEEE TVCG), 2026 </i> |
-												<a href="#" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Vetaverse: Technologies, Applications, and Visions toward the Intersection of Metaverse, AI, Vehicles, and Transportation Systems</b><br>
-												Peng Yuan Zhou, Jinjing Zhu, Yiting Wang, Yunfan Lu, Zixiang Wei, Haolin Shi, Yuchen Ding, Yu Gao, Qinglong Huang, Yan Shi, <b><u>Ahmad Alhilal</u></b>, Lik-Hang Lee, Tristan Braud, Pan Hui, Lin Wang<br>
-												<i style = "font-size: 14px">IEEE Transactions on Artificial Intelligence, Nov 2025 </i> |
-												<a href="https://ieeexplore.ieee.org/abstract/document/11267508/" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-
-											</li>
-											<li>
-												<b>Attention-based QoE-aware Digital Twin Empowered Edge Computing for Immersive Virtual Reality</b><br>
-												Jiadong Yu, <b><u>Ahmad Alhilal</u></b>, Tailin Zhou, Pan Hui, Danny Tsang<br>
-												<i style = "font-size: 14px">IEEE Transactions on Wireless Communications, March 2024 </i> |
-												<a href="https://ieeexplore.ieee.org/abstract/document/10486201" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-
-											</li>
-											<li>
-												<b> Bi-directional Digital Twin and Edge Computing in the Metaverse</b><br>
-												Jiadong Yu, <b><u>Ahmad Alhilal</u> (co-first author)</b>, Pan Hui, Danny Tsang<br>
-												<i style = "font-size: 14px">IEEE Internet of Things Magazine, May 2024</i> |
-												<a href="https://ieeexplore.ieee.org/abstract/document/10517506" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Towards a Traffic Metaverse with Shared Vehicle Perception</b><br>
-												<b><u>Ahmad Alhilal</u></b>, Tristan Braud, Lik-Hang Lee, Hang Chen, and Pan Hui<br>
-												<i style = "https://ieeexplore.ieee.org/document/1028">IEEE Communications Standards Magazine, Oct 2023</i> |
-												<a href="https://ieeexplore.ieee.org/document/10287314" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>DiOS-An Extended Reality Operating System for the Metaverse</b><br>
-												Tristan Braud, Lik-Hang Lee, <b><u>Ahmad Alhilal</u></b>, Carlos Bermejo Fernández, Pan Hui,<br>
-												<i style = "font-size: 14px">IEEE MultiMedia Magazine, Oct 2022</i> | <a href="https://ieeexplore.ieee.org/document/9907830" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Street Smart in 5G: Vehicular Applications, Communication</b><br>
-												<b><u>Ahmad Alhilal</u></b>, Tristan Braud, Benjamin Finley, Dongzhe Su, and Pan Hui<br>
-												<i style = "font-size: 14px">IEEE ACCESS, Sep 2022</i> |
-												<a href="https://ieeexplore.ieee.org/document/9906062" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>A Roadmap Towards a Unified Space Communication Architecture</b><br>
-												<b><u>Ahmad Alhilal</u></b>,Tristan Braud, and Pan Hui<br>
-												<i style = "font-size: 14px">IEEE ACCESS, July 2021</i>
-												| <a href="https://ieeexplore.ieee.org/abstract/document/9475040" target="_blank" style = "font-size: 14px"> Link </a>
-												<br><br>
-											</li>
-										    <li>
-												<b>The Sky is NOT the Limit Anymore: Future Architecture of the Interplanetary Internet</b><br>
-												<b><u>Ahmad Alhilal</u></b>, Tristan Braud,  Pan Hui<br>
-												<i style = "font-size: 14px">IEEE Aerospace and Electronic Systems Magazine, August 2019</i>
-												| <a href="https://ieeexplore.ieee.org/document/8799061" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Evaluation of WSN hierarchical routing protocols according to energy efficiency heterogeneity levels</b><br>
-												<b><u>Ahmad Alhilal</u></b>, Salah Dowaji<br>
-												<i style = "font-size: 14px">International Review on Computers and Software (IRECOS)</i>
-												| <a href="https://www.praiseworthyprize.org/jsm/index.php?journal=irecos&page=article&op=view&path%5B%5D=12754" target="_blank" style = "font-size: 14px">Link</a>
-											</li>
-										</ol>
-
-										<hr class="major" />
-										<header>
-											<h2> Publication in Peer-Review Workshops</h2>
-										</header>
-										<ol>
-											<li>
-												<b>Lie Detection in Social VR Using Multimodal Data</b><br>
-												Clarence Chi S Cheung; <b><u>Ahmad Alhilal</u></b>; Kriti Agrawal; Zhizhuo Yin; Reza Hadi Mogavi; Pan Hui <br>
-												<i style = "font-size: 14px">IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW) 2025</i>|
-												<a href="https://ieeexplore.ieee.org/abstract/document/10972885" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Resource-Aware Split Federated Learning for Edge Intelligence</b><br>
-												Amna Arouj, Ahmed M. Abdelmoniem, <b><u>Ahmad Alhilal</u></b>, Linlin You, Chen Wang <br>
-												<i style = "font-size: 14px">The third Workshop on Machine Learning on Edge in Sensor Systems (Sensys-ML 2024)</i>|
-												<a href="https://ieeexplore.ieee.org/abstract/document/10562161" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse</b><br>
-												Kirill Shatilov, <b><u>Ahmad Alhilal</u></b>, Tristan Braud, Lik-Hang Lee, Pengyuan Zhou,  and Pan Hui<br>
-												<i style = "font-size: 14px">The First Workshop on Metaverse Systems and Applications (MetaSys '23), 2023</i> |
-												<a href="https://dl.acm.org/doi/10.1145/3597063.3597360" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>Network Traffic in the Metaverse: The Case of Social VR</b><br>
-												<b><u>Ahmad Alhilal</u></b>, Kirill Shatilov (co-first author), Gareth Tyson, Tristan Braud, and Pan Hui<br>
-												<i style = "font-size: 14px">The 2nd International Workshop on Social and Metaverse Computing and Networking (SocialMeta 2023)</i> |
-												<a href="https://ieeexplore.ieee.org/document/10302989" target="_blank" style = "font-size: 14px">Link</a>
-												<br><br>
-											</li>
-											<li>
-												<b>ERL: Edge based Reinforcement Learning for optimized urban Traffic light control</b><br>
-												Pengyuan Zhou, Tristan Braud, <b><u>Ahmad Alhilal</u></b>, Pan Hui, Jussi Kangasharju <br>
-												<i style = "font-size: 14px">IEEE PERCOM SmartEdge'19 Workshop, 2019</i>
-												| <a href="https://ieeexplore.ieee.org/abstract/document/8730706" target="_blank" style = "font-size: 14px">Link</a>
-												<br> <br>
-											</li>
-											<li>
-												<b>Driving Big Data: A First Look at Driving Behavior Via a Large-scale Private Car Dataset</b><br>
-												Tong Li, <b><u>Ahmad Alhilal</u></b>, Anlan Zhang, Mohammad A Hoque, Dimitris Chatzopoulos, Zhu Xiao, Yong Li, Pan Hui <br>
-												<i style = "font-size: 14px"> IEEE 35th International Conference on Data Engineering Workshops (ICDEW), 2019</i>
-												| <a href="https://ieeexplore.ieee.org/abstract/document/8750962" target="_blank" style = "font-size: 14px">Link</a>
-											</li>
-										</ol>
-									</div>
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<div id="sidebar">
-					<div class="inner">
-
-						<!-- Search -->
-							<section id="search" class="alt">
-								<form method="post" action="#">
-									<input type="text" name="query" id="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<li><a href="publications.html">Publications</a></li>
-									<li><a href="teaching.html">Teaching</a></li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="conferences.html">Presentations</a></li>
-									<li><a href="projects.html">Projects</a></li>
-									<li><a href="honors.html">Honors & Awards</a></li>
-<!--									<li><a href="resources.html">Resources</a></li>-->
-<!--									<li><a href="resume.html">Resume</a></li>-->
-								</ul>
-							</nav>
-
-						<!-- Section -->
-						<section>
-							<header class="major">
-								<h2>Video Gallery</h2>
-							</header>
-							<div class="mini-posts">
-								<article>
-									<video width="280" height="190" src="videos/acmm.vrcc.mp4" title="Presentation at ACM MM'25" controls></video>
-									<p>Presentation: Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment <br>
-										<a href="https://acmmm2025.org/">The 33rd ACM International Conference on Multimedia Conference </a>
-									</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/FovOptix.mp4" title="Demo FovOptix" controls></video>
-									<p>Demo of FovOptix: Human Vision Compatible Video Compression in VR Cloud Gaming <br>
-									<a href="https://2024.acmmmsys.org/">The 15th ACM Multimedia Systems Conference </a>
-									</p>
-								</article>
-								<article>
-									<img align="center" src="files/SocialMeta_1.jpg" alt="" width="90%" height="90%"/>
-									<p style="padding-left: 5px">The 2nd International Workshop on Social and Metaverse Computing and Networking</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/acmm.hai.mp4" title="Demo MetaHKUST" controls></video>
-									<p>Demo of Human-Avatar Interaction in Metaverse: Framework for Full-Body Interaction</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/metaustDemo.mp4" title="Demo MetaHKUST" controls></video>
-									<p>Demo of our first prototype of MetaHKUST Virtual Classroom</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/MetUST.HAI.mp4" title="MetaHKUST" controls></video>
-									<p>Human-Avatar Interaction, Presentation in Press Conference on Metaverse (MetaHKUST)</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/metahkust.mp4" title="MetaHKUST" controls></video>
-									<p>Virtual Opening Ceremony of Ghuanghzou Campus on MetaHKUST</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/icdcs21_video.mp4" title="Presentation of CAD3 in ICDCS21" controls></video>
-									<p>Presentation of CAD3 in ICDCS 2021</p>
-								</article>
-								<article>
-									<img align="center" src="files/pressconf.metaust.jpg" alt="" width="90%" height="90%"/>
-									<p style="padding-left: 5px">Leading, Dev&tech team for first press conference in the Metaverse.</p>
-								</article>
-							</div>
-							<!-- For more video button -->
-							<!-- <ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul> -->
-						</section>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Get in touch</h2>
-								</header>
-								<p>Feel free to contact me:</p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">ahmad.alhilal[AT]aalto[dot]fi</a></li>
-									<li class="icon solid fa-home">Pihlajatie 3, Helsinki, Finland</li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-							</footer>
-
-					</div>
-				</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <!-- WORKSHOPS full list -->
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">Peer-Review Workshops</h2>
+    <div class="pub-entry"><div class="pub-title">Lie Detection in Social VR Using Multimodal Data <br> </div><div class="venue">Clarence Chi S Cheung, Ahmad Alhilal, Kriti Agrawal, Zhizhuo Yin, Reza Hadi Mogavi, Pan Hui <br> IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW) 2025 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Resource-Aware Split Federated Learning for Edge Intelligence <br> </div><div class="venue">Amna Arouj, Ahmed M. Abdelmoniem, Ahmad Alhilal, Linlin You, Chen Wang <br> The third Workshop on Machine Learning on Edge in Sensor Systems (Sensys-ML 2024) — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Players are not Ready 101: A Tutorial on Organising Mixed-mode Events in the Metaverse <br> </div><div class="venue">Kirill Shatilov, Ahmad Alhilal, Tristan Braud, Lik-Hang Lee, Pengyuan Zhou, Pan Hui <br> The First Workshop on Metaverse Systems and Applications (MetaSys '23), 2023 — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Network Traffic in the Metaverse: The Case of Social VR <br> </div><div class="venue">Ahmad Alhilal, Kirill Shatilov (co-first author), Gareth Tyson, Tristan Braud, Pan Hui <br> The 2nd International Workshop on Social and Metaverse Computing and Networking (SocialMeta 2023) — <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">ERL: Edge based Reinforcement Learning for optimized urban Traffic light control <br> </div><div class="venue">Pengyuan Zhou, Tristan Braud, Ahmad Alhilal, Pan Hui, Jussi Kangasharju <br> IEEE PERCOM SmartEdge'19 Workshop, 2019 —  <a href="#">Link</a></div></div>
+    <div class="pub-entry"><div class="pub-title">Driving Big Data: A First Look at Driving Behavior Via a Large-scale Private Car Dataset <br> </div><div class="venue">Tong Li, Ahmad Alhilal, Anlan Zhang, Mohammad A Hoque, Dimitris Chatzopoulos, Zhu Xiao, Yong Li, Pan Hui <br> IEEE 35th International Conference on Data Engineering Workshops (ICDEW), 2019 — <a href="#">Link</a></div></div>
+  </div>
+</div>
+<footer>
+  <p>© 2025 Dr. Ahmad Alhilal — Comprehensive peer-reviewed publications</p>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 500, once: true });</script>
+</body>
 </html>

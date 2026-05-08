@@ -1,206 +1,221 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Alhilal's Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="files/ahmad_id_photo.ico">
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ahmad Alhilal · Research Projects</title>
+  <link rel="icon" href="ahmad_photo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      background: #f6fbfc;
+      font-family: 'Inter', sans-serif;
+      color: #11212e;
+      line-height: 1.5;
+    }
+    .navbar {
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,250,0.88);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0,150,160,0.2);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      font-family: 'Space Grotesk', monospace;
+      background: linear-gradient(120deg, #0f3b5c, #1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e4a5f;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color:#0f7c8c; border-bottom:2px solid #1f9eae; padding-bottom:4px; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem 3rem; }
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0 1rem;
+      background: linear-gradient(135deg,#0a2f44,#1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+      border: 1px solid #d9eef2;
+    }
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #1f9eae;
+      padding-left: 1rem;
+    }
+    .project-item {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e2edf0;
+    }
+    .project-title {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #0f3b5c;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .project-date {
+      font-size: 0.8rem;
+      background: #e2f0f3;
+      display: inline-block;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      color: #146c7a;
+      margin-left: 0.5rem;
+    }
+    .project-desc {
+      margin-top: 0.6rem;
+      color: #2a5f6e;
+      font-size: 0.95rem;
+    }
+    .tech-tag {
+      background: #eef3f5;
+      display: inline-block;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+      color: #1c7b8a;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e4f2f5;
+      color: #1e5b66;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 0.6rem; }
+      .container { padding: 0 1.2rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo-container">
+        <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/28?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #1f9eae;">
+    	<span class="logo"> Ahmad Alhilal, PhD</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="publications.html">📄 Publications</a></li>
+    <li><a href="teaching.html">👨‍🏫 Teaching</a></li>
+    <li><a href="news.html">📰 News</a></li>
+    <li><a href="presentations.html">🎤 Presentations</a></li>
+    <li><a href="projects.html">🔬 Projects</a></li>
+    <li><a href="honors.html">🏆 Honors</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <h1 class="page-title">🔬 Research & industry projects</h1>
+  
+  <!-- Ongoing Projects -->
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title"><i class="fas fa-sync-alt"></i> Ongoing projects</h2>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-cloud-upload-alt"></i> Adaptive Bitrate Streaming for XR Cloud Gaming <span class="project-date">Jan 2023 – present</span></div>
+      <div class="project-desc"> <b> [Aalto University and HKUST]:</b> Design and develop an end-to-end architecture for real-time video streaming in VR cloud gaming
+        <br> Adapt bitrate and quality non-uniformly to underlying network conditions
+        <br> Fair evaluation against the SOTA solutions.</div>
+      <div><span class="tech-tag">NVidia Coding</span> <span class="tech-tag">WebRTC</span><span class="tech-tag">Reinforcement Learning</span><span class="tech-tag">Foveated Encoding</span></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-eye"></i> Gaze-Adaptive & Foveated Streaming in XR <span class="project-date">Sep 2023 – present</span></div>
+      <div class="project-desc"> <b> [HKUST, Hong Kong]:</b> R&D on real-time multimedia communication and foveated rendering and video encoding for low-latency streaming 
+        <br> Enabling technologies: VR, AR, Unity</div>
+      <div><span class="tech-tag">Foveated Rendering</span><span class="tech-tag">Foveated Encoding</span> <span class="tech-tag">NVEnc</span><span class="tech-tag">Cloud XR</span></div>
+    </div>
+  </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Completed Projects -->
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">✅ Completed projects</h2>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-cloud-upload-alt"></i> Adaptive Bitrate Streaming for Mobile Cloud Gaming <span class="project-date">Jan 2021 – May 2024</span></div>
+      <div class="project-desc"><b> [HKUST, Hong Kong]:</b> Design and develop a full video streaming pipeline for cloud gaming
+        <br> Adapt video rate to underlying network conditions
+        <br> Fair evaluation against SOTA solutions.</div>
+      <div><span class="tech-tag">WebRTC</span><span class="tech-tag">Reinforcement Learning</span><span class="tech-tag">Adaptive Streaming</span></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-vr-cardboard"></i> Human-Avatar Interaction in Metaverse <span class="project-date">Apr 2022 – 2024</span></div>
+      <div class="project-desc"><b> [HKUST, Hong Kong]:</b> Real-time multimedia communication and full-body human-avatar interaction framework
+        <br> Enabling technologies: Virtual Reality, Augmented Reality, Unity, Mocap Sensors</div>
+      <div><span class="tech-tag">Unity3D</span><span class="tech-tag">XR</span><span class="tech-tag">Avatars</span> <span class="tech-tag">PERCEPTION NEURON 3</span> </div>
+    </div>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-car-side"></i> Edge-assisted Driving Awareness on The Roads <span class="project-date">Sep 2019 – Jan 2021</span></div>
+      <div class="project-desc"><b> [HKUST, Hong Kong]:</b> Framework for real-time vehicle data streaming and processing (Apache Kafka and Spark)
+        <br> Framework for detecting unsafe driving activities at network edge (RSUs)
+        <br> Evaluate reliability and responsiveness.</div>
+      <div><span class="tech-tag">Apache Kafka</span><span class="tech-tag">Spark</span><span class="tech-tag">Edge Computing</span><span class="tech-tag">RSU</span></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-chart-line"></i> Service & tools to support ML Development Life Cycle <span class="project-date">2021 – 2022</span></div>
+      <div class="project-desc"><b> [LSCM, Hong Kong]:</b> Research project focusing on MLOps pipelines, reproducibility and deployment at the edge.</div>
+      <div><span class="tech-tag">MLOps</span><span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-cloud"></i> Distributed Rendering in Cloud Gaming <span class="project-date">2020 – 2021</span></div>
+      <div class="project-desc"><b> [Huawei, Hong Kong]:</b> Research on splitting rendering workload between edge and cloud to reduce latency for interactive cloud gaming.</div>
+      <div><span class="tech-tag">Distributed Systems</span><span class="tech-tag">Cloud Rendering</span></div>
+    </div>
+  </div>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-							<header id="header">
-								<a href="projects.html" class="logo"><strong> Ahmad ALHILAL's</strong> Projects</a>
-								<ul class="icons">
-									<li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Hong Kong</li>
-									<li><a href="https://ahmad-hl.github.io/"><span class="label"><i style='font-size:24px' class='fas'>&#xf406;</i></span></a></li>
-									<li><a href="https://github.com/ahmad-hl" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									<li><a href="https://www.linkedin.com/in/ahmedhlal/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://scholar.google.com/citations?hl=en&user=XniyjjEAAAAJ&sortby=pubdate" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
-								</ul>
-							</header>
-
-							<!-- Content -->
-								<section>
-
-									The sections below lists all projects, completed and ongoing during my PhD study and postdoctoral lifetime.
-
-									<hr class="major" />
-
-									<div class="media">
-										<h2> Ongoing Projects <br> </h2>
-										<ol>
-										<h3> <li> <b>Adaptive Bitrate streaming for Mobile/XR Cloud Gaming (Research Project)</b> </li><br> </h3>
-											<ul> <b> [Jan 2021 - present]  Hong Kong University of Science and Technology, Hong Kong </b> </ul>
-											<p> Design and develop a full pipeline of video streaming prototype for cloud gaming <br>
-												Adapt the video rate to the underlying network conditions <br>
-												Fair evaluation against the state-of-the-art solutions <br><br>
-											</p>
-
-											<h3>  <li>  MetaHKUST, World’s First Twin Campuses in Metaverse <br>  </li></h3>
-											<ul> <b>[April 2022 - present]  Hong Kong University of Science and Technology, Hong Kong </b> </ul>
-											Developing a mixed-reality platform for university scale education and administration activities <br>
-											Enabling Technologies: Virtual Reality, Augmented Reality, Unity, Real-time Multimedia Communication, Human-Avatar Interactions <br><br>
-
-											<h3> <li>  <b>MetaUST Classroom, a Mixed-Reality Teaching platform and World’s First Virtual Classroom in Metaverse</b> <br> </li></h3>
-											<ul> <b>[Sep 2023 - present]  Hong Kong University of Science and Technology, Hong Kong </b> </ul>
-											Developing a mixed-reality platform to enable virtual classroom for teaching activities <br>
-											Enabling Technologies: Virtual Reality, Augmented Reality, Unity, Real-time Multimedia Communication, Human-Avatar Interactions <br>
-
-										</ol>
-
-
-
-									<hr class="major" />
-									<h2> Completed Projects <br> </h2>
-										<h3> - Research Project <br>  </h3>
-									<ol>
-										<b> <li> [Sep 2019 - Jan 2021] Edge-assisted Driving Awareness on The Roads</li></b>  <br><br>
-										Framework for real-time vehicle data streaming and processing (Apache Kafka and Spark)<br>
-										Framework for detecting unsafe driving activities at the network edge (RSUs)<br>
-										Evaluate  reliability and responsiveness<br><br>
-
-									<h3> - Industry Projects <br>  </h3>
-										 <b> <li> [2021 - 2022] Service and tools to support Machine Learning Development Life Cycle</li> </b> <br>
-											Industry Collaboration: Logistics and Supply Chain MultiTech R&D Centre , Hong Kong. <br>
-											Technologies: Python & git, Docker, Kubernetes. <br><br>
-
-										<b> <li>  [2020 - 2021] Distributed Rendering in Cloud Game </li></b><br>
-						 					Industry Collaboration: Huawei Technologies, Shenzhen, China.<br>
-											Technologies: Unity3D, c#, video codec.<br><br>
-
-									</ol>
-									</div>
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-				<div id="sidebar">
-					<div class="inner">
-
-						<!-- Search -->
-							<section id="search" class="alt">
-								<form method="post" action="#">
-									<input type="text" name="query" id="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<li><a href="publications.html">Publications</a></li>
-									<li><a href="teaching.html">Teaching</a></li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="conferences.html">Presentations</a></li>
-									<li><a href="projects.html">Projects</a></li>
-									<li><a href="honors.html">Honors & Awards</a></li>
-<!--									<li><a href="resources.html">Resources</a></li>-->
-<!--									<li><a href="resume.html">Resume</a></li>-->
-								</ul>
-							</nav>
-
-						<!-- Section -->
-						<section>
-							<header class="major">
-								<h2>Video Gallery</h2>
-							</header>
-							<div class="mini-posts">
-								<article>
-									<video width="280" height="190" src="videos/acmm.vrcc.mp4" title="Presentation at ACM MM'25" controls></video>
-									<p>Presentation: Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment <br>
-										<a href="https://acmmm2025.org/">The 33rd ACM International Conference on Multimedia Conference </a>
-									</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/FovOptix.mp4" title="Demo FovOptix" controls></video>
-									<p>Demo of FovOptix: Human Vision Compatible Video Compression in VR Cloud Gaming <br>
-									<a href="https://2024.acmmmsys.org/">The 15th ACM Multimedia Systems Conference </a>
-									</p>
-								</article>
-								<article>
-									<img align="center" src="files/SocialMeta_1.jpg" alt="" width="90%" height="90%"/>
-									<p style="padding-left: 5px">The 2nd International Workshop on Social and Metaverse Computing and Networking</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/acmm.hai.mp4" title="Demo MetaHKUST" controls></video>
-									<p>Demo of Human-Avatar Interaction in Metaverse: Framework for Full-Body Interaction</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/metaustDemo.mp4" title="Demo MetaHKUST" controls></video>
-									<p>Demo of our first prototype of MetaHKUST Virtual Classroom</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/MetUST.HAI.mp4" title="MetaHKUST" controls></video>
-									<p>Human-Avatar Interaction, Presentation in Press Conference on Metaverse (MetaHKUST)</p>
-								</article>
-
-								<article>
-									<video width="280" height="190" src="videos/metahkust.mp4" title="MetaHKUST" controls></video>
-									<p>Virtual Opening Ceremony of Ghuanghzou Campus on MetaHKUST</p>
-								</article>
-								<article>
-									<video width="280" height="190" src="videos/icdcs21_video.mp4" title="Presentation of CAD3 in ICDCS21" controls></video>
-									<p>Presentation of CAD3 in ICDCS 2021</p>
-								</article>
-								<article>
-									<img align="center" src="files/pressconf.metaust.jpg" alt="" width="90%" height="90%"/>
-									<p style="padding-left: 5px">Leading, Dev&tech team for first press conference in the Metaverse.</p>
-								</article>
-							</div>
-							<!-- For more video button -->
-							<!-- <ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul> -->
-						</section>
-
-						<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Get in touch</h2>
-								</header>
-								<p>Feel free to contact me:</p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">ahmad.alhilal[AT]aalto[dot]fi</a></li>
-									<li class="icon solid fa-home">Pihlajatie 3, Helsinki, Finland</li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-							</footer>
-
-					</div>
-				</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <!-- Industry Collaborations (Completed) -->
+  <div class="section-card" data-aos="fade-up">
+    <h2 class="section-title">✅ Industry collaborations</h2>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-industry"></i> Industry Collaboration: Logistics & Supply Chain MultiTech R&D Centre (Hong Kong) <span class="project-date">Completed</span></div>
+      <div class="project-desc">Technologies: Python, git, Docker, Kubernetes.</div>
+    </div>
+    <div class="project-item">
+      <div class="project-title"><i class="fas fa-microchip"></i> Industry Collaboration: Huawei Technologies (Shenzhen, China) <span class="project-date">Completed</span></div>
+      <div class="project-desc">Technologies: Unity3D, C#, video codec.</div>
+    </div>
+  </div>
+</div>
+<footer><p>© 2025 Dr. Ahmad Alhilal — leading edge-cloud R&D for next-generation XR and adaptive streaming systems.</p></footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({ duration: 500, once: true });</script>
+</body>
 </html>
