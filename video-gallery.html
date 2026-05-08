@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ahmad Alhilal · Video Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      background: #f6fbfc;
+      font-family: 'Inter', sans-serif;
+      color: #11212e;
+      line-height: 1.5;
+    }
+    .navbar {
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,250,0.88);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0,150,160,0.2);
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .profile-photo {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid #1f9eae;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      font-family: 'Space Grotesk', monospace;
+      background: linear-gradient(120deg, #0f3b5c, #1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e4a5f;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color:#0f7c8c; border-bottom:2px solid #1f9eae; padding-bottom:4px; }
+    .container { max-width: 1300px; margin: 2rem auto; padding: 0 2rem 3rem; }
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0 0.5rem;
+      background: linear-gradient(135deg,#0a2f44,#1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .page-subtitle {
+      color: #2a6b7a;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+    .video-card {
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+      border: 1px solid #d9eef2;
+      transition: all 0.25s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 32px -16px rgba(0,0,0,0.12);
+      border-color: #9ad4df;
+    }
+    .video-container {
+      width: 100%;
+      background: #000;
+    }
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .video-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .video-info {
+      padding: 1.2rem;
+    }
+    .video-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0a2f44;
+      margin-bottom: 0.3rem;
+      line-height: 1.4;
+    }
+    .video-venue {
+      font-size: 0.75rem;
+      color: #2a6b7a;
+      margin-top: 0.3rem;
+    }
+    .video-venue a {
+      color: #1f9eae;
+      text-decoration: none;
+    }
+    .video-venue a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e4f2f5;
+      color: #1e5b66;
+      margin-top: 2rem;
+    }
+    .social-links a {
+      color: #1e5b66;
+      margin: 0 1rem;
+      font-size: 1.4rem;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .social-links a:hover {
+      color: #0a778a;
+      transform: translateY(-3px);
+    }
+    @media (max-width: 750px) {
+      .navbar { flex-direction: column; gap: 0.6rem; }
+      .nav-links { justify-content: center; gap: 1rem; }
+      .container { padding: 0 1.2rem 2rem; }
+      .video-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="logo-container">
+    <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/35?text=A';">
+    <span class="logo">Ahmad Alhilal, PhD</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="publications.html">📄 Publications</a></li>
+    <li><a href="teaching.html">👨‍🏫 Teaching</a></li>
+    <li><a href="news.html">📰 News</a></li>
+    <li><a href="presentations.html">🎤 Presentations</a></li>
+    <li><a href="projects.html">🔬 Projects</a></li>
+    <li><a href="honors.html">🏆 Honors</a></li>
+    <li><a href="video-gallery.html" style="color:#1f9eae;">🎥 Video Gallery</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1 class="page-title" data-aos="fade-up">🎥 Video Gallery</h1>
+  <p class="page-subtitle" data-aos="fade-up">Conference presentations, demos, and media appearances</p>
+
+  <div class="video-grid" data-aos="fade-up">
+    <!-- Video 1: ACM MM 2025 Presentation -->
+    <div class="video-card">
+      <div class="video-container">
+        <video src="videos/acmm.vrcc.mp4" title="Congestion Control for VR Cloud Gaming" controls preload="metadata"></video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment</div>
+        <div class="video-venue">Presentation at <a href="https://acmmm2025.org/">The 33rd ACM International Conference on Multimedia (ACM MM 2025)</a></div>
+      </div>
+    </div>
+
+    <!-- Video 2: FovOptix Demo -->
+    <div class="video-card">
+      <div class="video-container">
+        <video src="videos/FovOptix.mp4" title="FovOptix Demo" controls preload="metadata"></video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">FovOptix: Human Vision Compatible Video Compression in VR Cloud Gaming</div>
+        <div class="video-venue">Demo at <a href="https://2024.acmmmsys.org/">The 15th ACM Multimedia Systems Conference (MMSys 2024)</a></div>
+      </div>
+    </div>
+
+    <!-- Video 3: SocialMeta Workshop Photo -->
+    <div class="video-card">
+      <div class="video-container">
+        <img src="files/SocialMeta_1.jpg" alt="SocialMeta Workshop 2023">
+      </div>
+      <div class="video-info">
+        <div class="video-title">The 2nd International Workshop on Social and Metaverse Computing and Networking</div>
+        <div class="video-venue">Workshop presentation, Hong Kong, July 2023</div>
+      </div>
+    </div>
+
+    <!-- Video 4: Human-Avatar Interaction Demo -->
+    <div class="video-card">
+      <div class="video-container">
+        <video src="videos/acmm.hai.mp4" title="Human-Avatar Interaction" controls preload="metadata"></video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Human-Avatar Interaction in Metaverse: Framework for Full-Body Interaction</div>
+        <div class="video-venue">Demo at ACM Multimedia Asia 2022</div>
+      </div>
+    </div>
+
+    <!-- Video 5: MetaHKUST Virtual Classroom Demo -->
+    <div class="video-card">
+      <div class="video-container">
+        <video src="videos/metaustDemo.mp4" title="MetaHKUST Virtual Classroom" controls preload="metadata"></video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">MetaHKUST Virtual Classroom</div>
+        <div class="video-venue">First prototype demonstration, 2022</div>
+      </div>
+    </div>
+
+    <!-- Video 6: MetaHKUST Press Conference -->
+    <div class="video-card">
+      <div class="video-container">
+        <video src="videos/MetUST.HAI.mp4" title="MetaHKUST Press Conference" controls preload="metadata"></video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Human-Avatar Interaction</div>
+        <div class="video-venue">Presentation in Press Conference on Metaverse (MetaHKUST)</div>
+      </div>
+    </div>
+
+    <!-- Video 7: Virtual Opening Ceremony -->
+    <div class="video-card">
+      <div class="video-container">
+        <video src="videos/metahkust.mp4" title="MetaHKUST Opening Ceremony" controls preload="metadata"></video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Virtual Opening Ceremony of Guangzhou Campus on MetaHKUST</div>
+        <div class="video-venue">Metaverse event, 2022</div>
+      </div>
+    </div>
+
+    <!-- Video 8: ICDCS 2021 Presentation -->
+    <div class="video-card">
+      <div class="video-container">
+        <video src="videos/icdcs21_video.mp4" title="CAD3 ICDCS 2021" controls preload="metadata"></video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">CAD3: Edge-facilitated Real-time Collaborative Abnormal Driving Distributed Detection</div>
+        <div class="video-venue">Presentation at IEEE ICDCS 2021</div>
+      </div>
+    </div>
+
+    <!-- Video 9: Press Conference Leadership Photo -->
+    <div class="video-card">
+      <div class="video-container">
+        <img src="files/pressconf.metaust.jpg" alt="Leading MetaHKUST Press Conference">
+      </div>
+      <div class="video-info">
+        <div class="video-title">Leading Development & Tech Team for First Press Conference in the Metaverse</div>
+        <div class="video-venue">MetaHKUST Launch Event, July 2022</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Dr. Ahmad Alhilal — Senior Postdoctoral Researcher @ Aalto University & HKUST alumnus.</p>
+  <!-- <div class="social-links">
+    <a href="publications.html"><i class="fas fa-book"></i> Publications</a>
+    <a href="teaching.html"><i class="fas fa-chalkboard"></i> Teaching</a>
+    <a href="news.html"><i class="fas fa-rss"></i> News</a>
+    <a href="projects.html"><i class="fas fa-flask"></i> Projects</a>
+    <a href="honors.html"><i class="fas fa-trophy"></i> Honors</a>
+    <a href="video-gallery.html"><i class="fas fa-video"></i> Video Gallery</a>
+  </div>
+</footer> -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 500, once: true, offset: 50 });
+</script>
+</body>
+</html>
