@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Ahmad Alhilal, PhD</title>
+  <title>Ahmad Alhilal, PhD — Academic Portfolio</title>
   <link rel="icon" href="ahmad_photo.jpg">
   <!-- Google Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,16 +26,8 @@
       overflow-x: hidden;
     }
 
-    /* glass morphism navbar + gradients */
     .gradient-bg {
       background: radial-gradient(circle at 10% 20%, rgba(0, 180, 210, 0.03), rgba(10, 40, 55, 0.01));
-    }
-
-    .glow-text {
-      background: linear-gradient(135deg, #0B2F5C, #188f9e);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
     }
 
     /* navbar refined */
@@ -53,6 +45,21 @@
       flex-wrap: wrap;
       border-bottom: 1px solid rgba(0, 150, 160, 0.2);
       box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .profile-photo {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid #1f9eae;
+      background: #fff;
     }
 
     .logo {
@@ -132,6 +139,10 @@
       font-weight: 600;
       transition: 0.2s;
       box-shadow: 0 6px 12px rgba(22,128,148,0.2);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .btn-primary:hover {
@@ -147,6 +158,10 @@
       color: #168094;
       font-weight: 600;
       transition: 0.2s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .btn-outline:hover {
@@ -180,7 +195,7 @@
 
     .card-flex {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 1.8rem;
     }
 
@@ -210,25 +225,237 @@
       color: #146c7a;
     }
 
-    .news-list {
-      list-style: none;
-      margin-top: 1rem;
+    /* Publication entry styled like teaching entries */
+    .publication-compact-card {
+      background: #eaf4f6;
+      border-radius: 2rem;
+      padding: 1.8rem;
     }
-    .news-list li {
-      margin-bottom: 1rem;
-      border-left: 3px solid #2aa3b3;
-      padding-left: 1rem;
-      font-size: 0.9rem;
+    .pub-entry {
+      background: rgba(255, 255, 250, 0.9);
+      border-radius: 1.5rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: 0.2s;
+      border: 1px solid #cfe6ec;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
     }
-    .pub-mini {
-      margin: 0.8rem 0;
-      font-size: 0.85rem;
+    .pub-entry:hover {
+      background: white;
+      border-color: #9ccbd4;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
-    hr {
-      margin: 1rem 0;
-      border-color: #cce7ec;
+    .pub-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      gap: 8px;
+    }
+    .pub-venue-badge {
+      background: linear-gradient(105deg, #d9eef1, #cbe5ea);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #115f6e;
+      letter-spacing: -0.2px;
+      border-left: 3px solid #168094;
+    }
+    .pub-venue-badge i {
+      font-size: 0.75rem;
+      color: #168094;
+    }
+    .pub-year {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #d9eef1;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      color: #115f6e;
+    }
+    .pub-title {
+      font-weight: 800;
+      font-size: 1rem;
+      color: #0a3b47;
+      margin: 0.5rem 0 0.25rem 0;
+      line-height: 1.4;
+    }
+    .pub-authors {
+      font-size: 0.8rem;
+      color: #4a6a74;
+      margin-top: 0.2rem;
+      line-height: 1.4;
     }
 
+    /* Latest highlights redesigned to match publication theme */
+    .highlights-compact-card {
+      background: #eaf4f6;
+      border-radius: 2rem;
+      padding: 1.8rem;
+    }
+    .highlight-entry {
+      background: rgba(255, 255, 250, 0.9);
+      border-radius: 1.5rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: 0.2s;
+      border: 1px solid #cfe6ec;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+    .highlight-entry:hover {
+      background: white;
+      border-color: #9ccbd4;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .highlight-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      gap: 8px;
+    }
+    .highlight-badge {
+      background: linear-gradient(105deg, #d9eef1, #cbe5ea);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #115f6e;
+      letter-spacing: -0.2px;
+      border-left: 3px solid #168094;
+    }
+    .highlight-badge i {
+      font-size: 0.8rem;
+      color: #168094;
+    }
+    .highlight-date {
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: #d9eef1;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      color: #115f6e;
+    }
+    .highlight-title {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #0a3b47;
+      margin: 0.5rem 0 0.25rem 0;
+      line-height: 1.4;
+    }
+    .highlight-detail {
+      font-size: 0.8rem;
+      color: #4a6a74;
+      margin-top: 0.2rem;
+      line-height: 1.4;
+    }
+    .highlight-link {
+      margin-top: 0.8rem;
+      display: inline-block;
+    }
+    .highlight-link a {
+      color: #168094;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .highlight-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Presentation card & teaching entry unified style */
+    .presentations-main-card, .teaching-card-compact {
+      background: #eaf4f6;
+      border-radius: 2rem;
+      padding: 1.8rem;
+    }
+    .talk-entry, .teaching-entry {
+      background: rgba(255, 255, 250, 0.9);
+      border-radius: 1.5rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: 0.2s;
+      border: 1px solid #cfe6ec;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+    .talk-entry:hover, .teaching-entry:hover {
+      background: white;
+      border-color: #9ccbd4;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .talk-header, .teaching-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      gap: 8px;
+    }
+    .talk-date-location, .teaching-date-location {
+      background: linear-gradient(105deg, #d9eef1, #cbe5ea);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #115f6e;
+      letter-spacing: -0.2px;
+      border-left: 3px solid #168094;
+      white-space: nowrap;
+      flex-wrap: wrap;
+    }
+    .talk-date-location i, .teaching-date-location i {
+      font-size: 0.8rem;
+      color: #168094;
+    }
+    .separator-dot {
+      margin: 0 3px;
+      font-size: 0.7rem;
+      opacity: 0.7;
+    }
+    .talk-venue, .teaching-venue {
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #d9eef1;
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      color: #115f6e;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: -0.2px;
+    }
+    .talk-title, .teaching-title {
+      font-weight: 800;
+      font-size: 1rem;
+      color: #0a3b47;
+      margin: 0.5rem 0 0.25rem 0;
+      line-height: 1.4;
+    }
+    .talk-detail, .teaching-detail {
+      margin-left: 0;
+      font-size: 0.85rem;
+      color: #1f5e6b;
+      line-height: 1.45;
+      margin-top: 0.2rem;
+    }
+    .mentorship-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
     footer {
       text-align: center;
       padding: 2.5rem;
@@ -272,19 +499,19 @@
       .navbar { flex-direction: column; gap: 0.6rem; }
       .nav-links { justify-content: center; gap: 1rem; }
       section { padding: 3rem 1.2rem; }
+      .talk-header, .teaching-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .talk-date-location, .teaching-date-location { white-space: normal; }
     }
   </style>
 </head>
 <body class="gradient-bg">
 
-<!-- Navigation with all subpage links (including all requested pages) -->
+<!-- Navigation -->
 <nav class="navbar">
-
   <div class="logo-container">
-        <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/28?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #1f9eae;">
-    	<span class="logo"> Ahmad Alhilal, PhD</span>
+    <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/38?text=A';">
+    <span class="logo"> Ahmad Alhilal, PhD</span>
   </div>
-
   <ul class="nav-links">
     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="publications.html">📄 Publications</a></li>
@@ -305,7 +532,7 @@
     <p style="max-width: 720px; margin: 1.2rem auto; font-size: 1.1rem;">Postdoctoral researcher at Aalto University · pioneering adaptive real‑time streaming, cloud‑rendered XR, and scalable visual computing.</p>
     <div class="btn-group">
       <a href="#research-focus" class="btn-primary"><i class="fas fa-microchip"></i> Research frontier</a>
-      <a href="publications.html" class="btn-outline"><i class="fas fa-scroll"></i> Latest publications</a>
+      <a href="#selected-publications" class="btn-outline"><i class="fas fa-scroll"></i> Latest publications</a>
       <a href="#latest-highlights" class="btn-outline"><i class="fas fa-newspaper"></i> Latest highlights</a>
       <a href="#teaching-mentorship" class="btn-outline"><i class="fas fa-chalkboard-teacher"></i> Teaching & mentorship</a>
       <a href="#presentations" class="btn-outline"><i class="fas fa-chalkboard"></i> Presentations</a>
@@ -314,24 +541,24 @@
   </div>
 </section>
 
-<!-- Research interests area using refreshed data -->
+<!-- Research interests area -->
 <section id="research-focus" data-aos="fade-up">
   <h2 class="section-title"><i class="fas fa-microchip"></i> Core research areas</h2>
   <div class="card-flex">
     <div class="card">
-      <div class="icon-badge" style="font-size: 2rem; margin-bottom: 1rem;"><i class="fas fa-wifi"></i></div>
+      <div style="font-size: 2rem; margin-bottom: 1rem;"><i class="fas fa-wifi"></i></div>
       <h3>Real-time Streaming</h3>
       <p>networked XR systems, congestion control for XR streaming, and QoE optimization for cloud gaming</p>
-      <div><span class="interest-tag">WebRTC</span><span class="interest-tag">ALVR</span><span class="interest-tag">GCC</span> <span class="interest-tag">NADA</span> <span class="interest-tag">NVidia NVEnc</span>  </div>
+      <div><span class="interest-tag">WebRTC</span><span class="interest-tag">ALVR</span><span class="interest-tag">GCC</span> <span class="interest-tag">NADA</span> <span class="interest-tag">NVidia NVEnc</span></div>
     </div>
     <div class="card">
-      <div class="icon-badge" style="font-size: 2rem;"><i class="fas fa-vr-cardboard"></i></div>
+      <div style="font-size: 2rem;"><i class="fas fa-vr-cardboard"></i></div>
       <h3>Cloud‑rendered XR Gaming</h3>
-      <p>foveated video encoding for immersive experiences, foveated rendering for scalable low-latency encoding </p>
+      <p>foveated video encoding for immersive experiences, foveated rendering for scalable low-latency encoding</p>
       <div><span class="interest-tag">VR cloud gaming</span><span class="interest-tag">Unity</span><span class="interest-tag">Foveated Video Encoding</span></div>
     </div>
     <div class="card">
-      <div class="icon-badge" style="font-size: 2rem;"><i class="fas fa-chart-line"></i></div>
+      <div style="font-size: 2rem;"><i class="fas fa-chart-line"></i></div>
       <h3>Scalable Visual Computing</h3>
       <p>Generative AI for 3D spaces, gaze‑adaptive compression, real-time rendering of photorealistic views</p>
       <div><span class="interest-tag">3D Gaussian Splat</span><span class="interest-tag">NeRF</span><span class="interest-tag">Complexity‑aware FVE</span><span class="interest-tag">Saliency‑Guided FVE</span></div>
@@ -342,84 +569,206 @@
   </div>
 </section>
 
-<!-- Selected News & Highlights (from news.html) with link to full news page -->
+<!-- ========== LATEST HIGHLIGHTS  ========= -->
 <section id="latest-highlights" data-aos="fade-up">
-  <h2 class="section-title"><i class="fas fa-newspaper"></i> Latest highlights</h2>
-  <div class="card-flex">
-    <div class="card">
-      <h3><i class="fas fa-trophy"></i> Recent awards & recognition</h3>
-      <ul style="margin-top: 0.8rem; list-style: none; padding-left: 0;">
-        <li>🏅 Honorable Mentions for Best Papers @ IEEE VR '26 (Korea)</li>
-        <li>🏅 Honourable Mention Award @ CHI Play 2024</li>
-      </ul>
-      <div style="margin-top: 1rem;"><a href="honors.html" style="color:#168094;">View all honors & awards →</a></div>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-microphone-alt"></i> Breaking news</h3>
-      <ul class="news-list">
-        <li><strong>Jan 2026:</strong> Three papers accepted at IEEE VR'26</li>
-	<li><strong>Sep 2025:</strong> A Paper accepted at CoNEXT'25</li>
-        <li><strong>July 2025:</strong> A paper accepted at ACM Multimedia'25</li>
-        <li><strong>Dec 2024:</strong> Started as postdoctoral researcher at Aalto University, Finland</li>
-      </ul>
-      <div><a href="news.html" style="color:#168094;">More news →</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- Selected Publications (Glimpse from publications.html) with link to full publications page -->
-<section data-aos="fade-up">
-  <h2 class="section-title"><i class="fas fa-book-open"></i> Selected publications</h2>
-  <div class="card-flex">
-    <div class="card">
-      <p><strong>FovRL: Joint Foveation and Quality Control for Immersive VR Streaming</strong><br>Tsui, Wu, Alhilal, Siekkinen, Hui — <em>The Web Conference (WWW) 2026</em></p>
-      <hr>
-      <p><strong> Frame Complexity-Aware FVE for Real-time High-Quality Streaming </strong><br>Wu, Alhilal, Tsui, Siekkinen, Hui — <em>IEEE VR 2026</em></p>
-      <hr>
-      <p><strong>EyeNexus: Adaptive Gaze-Driven Streaming for VR Cloud Gaming</strong><br>Wu, Alhilal, Tsui, Siekkinen, Hui — <em>ACM CoNEXT 2025</em></p>
-    </div>
-    <div class="card">
-      <p><strong>Congestion Control for VR Cloud Gaming </strong><br>Alhilal, Wu, Kämäräinen, Braud, Siekkinen — <em> ACM Multimedia 2025 </em> </p>
-      <hr>
-      <p><strong>FovOptix: Human Vision-Compatible Encoding in VR Cloud Gaming</strong><br>Alhilal, Wu, Tsui, Hui — <em>ACM MMSys ’24</em></p>
-      <hr>
-      <p><strong>Nebula: Reliable Low-latency Video Transmission for Mobile Cloud Gaming</strong><br>Alhilal, Braud, Han, Hui — <em>The Web Conference (WWW) 2022</em></p>
-      <div style="margin-top: 0.6rem;"><a href="publications.html" class="interest-tag">📖 Full publication list →</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- Teaching snapshot and Mentorship (from teaching.html) with link to full teaching page -->
-<section id="teaching-mentorship" data-aos="fade-up">
-  <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> Teaching & mentorship</h2>
-  <div class="card-flex">
-    <div class="card">
-      <h3>📚 Lecturer roles</h3>
-      <p><strong>Aalto University</strong> (2025): CS-E4265 Multimedia Systems<br>
-      <strong>HKUST</strong> (2024): Guest Lecturer – Extended Reality: Systems, Principles and Design<br>
-      <strong>Arab International University</strong> (2016-2017): Introduction to Computer Systems</p>
-      <h3 style="margin-top: 1rem;">🎓 TA experience</h3>
-      <p>Java Programming, Database Systems, Mobile App Development (HKUST) · Network Security, Computer Networks (Damascus/AIU).</p>
-      <a href="teaching.html" style="color:#168094;">Full teaching portfolio →</a>
-    </div>
-    <div class="card">
-      <h3><i class="fas fa-users"></i> Mentorship (PhD, MPhil & UROP)</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-        <span class="interest-tag">LAM Kit Yung (XR interaction)</span>
-        <span class="interest-tag">CHEUNG Clarence (Deception in VR)</span>
-        <span class="interest-tag">YANG Liang (Metaverse Interop)</span>
-        <span class="interest-tag">WANG Xuetong (VR Sketching)</span>
-        <span class="interest-tag">WU Ze (VR Gaming streaming)</span>
-        <span class="interest-tag">TSUI Yuk Hang (ML+CV)</span>
-        <span class="interest-tag">Simin YANG (GenAI spaces)</span>
-        <span class="interest-tag">PARK Chun Ho (Localization)</span>
+  <div class="highlights-compact-card">
+    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;"><i class="fas fa-newspaper"></i> Latest highlights</h3>
+    
+    <!-- Recent awards -->
+    <div class="highlight-entry">
+      <div class="highlight-header">
+        <div class="highlight-badge"><i class="fas fa-trophy"></i> Recent awards & recognition</div>
       </div>
-      <p style="margin-top: 1rem;">Advisor of 9+ FYPs at Damascus University</p>
+      <div class="highlight-title">🏅 Honorable Mentions for Best Papers in IEEE VR 2026</div>
+      <div class="highlight-title" style="margin-top: 0.5rem;">🏅 Honourable Mention Award in CHI Play 2024</div>
+      <div class="highlight-link"><a href="honors.html">View all honors & awards →</a></div>
+    </div>
+    
+    <!-- Breaking news group -->
+    <div class="highlight-entry">
+      <div class="highlight-header">
+        <div class="highlight-badge"><i class="fas fa-microphone-alt"></i> Breaking news</div>
+      </div>
+      <div class="highlight-title">📢 Three papers accepted at IEEE VR 2026</div>
+      <div class="highlight-title" style="margin-top: 0.5rem;">📢 Paper accepted at ACM CoNEXT 2025</div>
+      <div class="highlight-title" style="margin-top: 0.5rem;">📢 Paper accepted at ACM Multimedia 2025</div>
+      <div class="highlight-title" style="margin-top: 0.5rem;">📢 Started as Postdoctoral Researcher at Aalto University - Dec 2024</div>
+      <div class="highlight-link"><a href="news.html">More news & updates →</a></div>
     </div>
   </div>
 </section>
 
-<!-- Projects & demos glimpse with link to full projects page -->
+<!-- ========== SELECTED PUBLICATIONS ========= -->
+<section id="selected-publications" data-aos="fade-up">
+  <div class="publication-compact-card">
+    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;"><i class="fas fa-book-open"></i> Selected publications</h3>
+    
+    <!-- Publication 1 -->
+    <div class="pub-entry">
+      <div class="pub-header">
+        <div class="pub-venue-badge"><i class="fas fa-globe"></i> The Web Conference (WWW)</div>
+        <span class="pub-year">2026</span>
+      </div>
+      <div class="pub-title">FovRL: Joint Foveation and Quality Control for Immersive VR Streaming</div>
+      <div class="pub-authors">Tsui, Wu, Alhilal, Siekkinen, Hui</div>
+    </div>
+    
+    <!-- Publication 2 -->
+    <div class="pub-entry">
+      <div class="pub-header">
+        <div class="pub-venue-badge"><i class="fas fa-vr-cardboard"></i> IEEE VR</div>
+        <span class="pub-year">2026</span>
+      </div>
+      <div class="pub-title">Frame Complexity-Aware FVE for Real-time High-Quality Streaming</div>
+      <div class="pub-authors">Wu, Alhilal, Tsui, Siekkinen, Hui</div>
+    </div>
+    
+    <!-- Publication 3 -->
+    <div class="pub-entry">
+      <div class="pub-header">
+        <div class="pub-venue-badge"><i class="fas fa-network-wired"></i> ACM CoNEXT</div>
+        <span class="pub-year">2025</span>
+      </div>
+      <div class="pub-title">EyeNexus: Adaptive Gaze-Driven Streaming for VR Cloud Gaming</div>
+      <div class="pub-authors">Wu, Alhilal, Tsui, Siekkinen, Hui</div>
+    </div>
+    
+    <!-- Publication 4 -->
+    <div class="pub-entry">
+      <div class="pub-header">
+        <div class="pub-venue-badge"><i class="fas fa-file-video"></i> ACM Multimedia</div>
+        <span class="pub-year">2025</span>
+      </div>
+      <div class="pub-title">Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment</div>
+      <div class="pub-authors">Alhilal, Wu, Kämäräinen, Braud, Siekkinen</div>
+    </div>
+    
+    <!-- Publication 5 -->
+    <div class="pub-entry">
+      <div class="pub-header">
+        <div class="pub-venue-badge"><i class="fas fa-tachometer-alt"></i> ACM MMSys</div>
+        <span class="pub-year">2024</span>
+      </div>
+      <div class="pub-title">FovOptix: Human Vision-Compatible Encoding in VR Cloud Gaming</div>
+      <div class="pub-authors">Alhilal, Wu, Tsui, Hui</div>
+    </div>
+    
+    <!-- Publication 6 -->
+    <div class="pub-entry">
+      <div class="pub-header">
+        <div class="pub-venue-badge"><i class="fas fa-chart-line"></i> The Web Conference (WWW)</div>
+        <span class="pub-year">2022</span>
+      </div>
+      <div class="pub-title">Nebula: Reliable Low-latency Video Transmission for Mobile Cloud Gaming</div>
+      <div class="pub-authors">Alhilal, Braud, Han, Hui</div>
+    </div>
+    
+    <div style="margin-top: 1.5rem; text-align: center;">
+      <a href="publications.html" class="btn-outline" style="display: inline-flex;"><i class="fas fa-book"></i> Full publication list →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEACHING & MENTORSHIP ========= -->
+<section id="teaching-mentorship" data-aos="fade-up">
+  <div class="teaching-card-compact">
+    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;"><i class="fas fa-chalkboard-teacher"></i> Teaching & mentorship</h3>
+    <p style="margin-bottom: 1.2rem; color: #1f6c7a;">Academic teaching appointments and research supervision with location highlights.</p>
+    
+    <div class="teaching-entry">
+      <div class="teaching-header">
+        <div class="teaching-date-location">
+          <i class="fas fa-calendar-alt"></i> 2025 - 2026
+          <span class="separator-dot">•</span> 
+          <i class="fas fa-map-marker-alt"></i> Espoo, Finland
+        </div>
+        <span class="teaching-venue"><i class="fas fa-university"></i> Aalto University</span>
+      </div>
+      <div class="teaching-title">Lecturer – CS-E4265 Multimedia Systems</div>
+
+    </div>
+    
+    <div class="teaching-entry">
+      <div class="teaching-header">
+        <div class="teaching-date-location">
+          <i class="fas fa-calendar-alt"></i> 2024 
+          <span class="separator-dot">•</span> 
+          <i class="fas fa-map-marker-alt"></i> Hong Kong, China
+        </div>
+        <span class="teaching-venue"><i class="fas fa-university"></i> HKUST</span>
+      </div>
+      <div class="teaching-title">Guest Lecturer – Extended Reality: Systems, Principles and Design</div>
+    </div>
+    
+    <div class="teaching-entry">
+      <div class="teaching-header">
+        <div class="teaching-date-location">
+          <i class="fas fa-calendar-alt"></i> 2016–2017 
+          <span class="separator-dot">•</span> 
+          <i class="fas fa-map-marker-alt"></i> Damascus, Syria
+        </div>
+        <span class="teaching-venue"><i class="fas fa-university"></i> Arab International University</span>
+      </div>
+      <div class="teaching-title">Lecturer – Introduction to Computer Systems</div>
+    </div>
+    
+    <div class="teaching-entry">
+      <div class="teaching-header">
+        <div class="teaching-date-location">
+          <i class="fas fa-calendar-alt"></i> 2019–2023 
+          <span class="separator-dot">•</span> 
+          <i class="fas fa-map-marker-alt"></i> Hong Kong, China
+        </div>
+        <span class="teaching-venue"><i class="fas fa-university"></i> HKUST</span>
+      </div>
+      <div class="teaching-title">Teaching Assistant – Java Programming, Database Systems, Mobile App Development</div>
+    </div>
+    
+    <div class="teaching-entry">
+      <div class="teaching-header">
+        <div class="teaching-date-location">
+          <i class="fas fa-calendar-alt"></i> 2014–2016 
+          <span class="separator-dot">•</span> 
+          <i class="fas fa-map-marker-alt"></i> Damascus, Syria
+        </div>
+        <span class="teaching-venue"><i class="fas fa-university"></i> Damascus University / Arab International University</span>
+      </div>
+      <div class="teaching-title">Teaching Assistant – Network Security, Computer Networks</div>
+    </div>
+    
+    <div class="teaching-entry" style="margin-top: 0.5rem;">
+      <div class="teaching-header">
+        <div class="teaching-date-location">
+          <i class="fas fa-users"></i> 2020–Present 
+          <span class="separator-dot">•</span> 
+          <i class="fas fa-map-marker-alt"></i> Hong Kong & Finland
+        </div>
+        <span class="teaching-venue"><i class="fas fa-graduation-cap"></i> Research Mentorship</span>
+      </div>
+      <div class="teaching-title">PhD, MPhil & UROP Advising</div>
+      <div class="teaching-detail">
+        Supervising researchers on XR systems, cloud gaming, and generative AI for 3D spaces.
+        <div class="mentorship-tags">
+          <span class="interest-tag">LAM Kit Yung (XR interaction)</span>
+          <span class="interest-tag">CHEUNG Clarence (Deception in VR)</span>
+          <span class="interest-tag">YANG Liang (Metaverse Interop)</span>
+          <span class="interest-tag">WANG Xuetong (VR Sketching)</span>
+          <span class="interest-tag">WU Ze (VR Gaming streaming)</span>
+          <span class="interest-tag">TSUI Yuk Hang (ML+CV)</span>
+          <span class="interest-tag">Simin YANG (GenAI spaces)</span>
+          <span class="interest-tag">PARK Chun Ho (Localization)</span>
+        </div>
+        <p style="margin-top: 0.5rem;"><i class="fas fa-users"></i> Advisor of 9+ Final Year Projects at Damascus University.</p>
+      </div>
+    </div>
+    
+    <div style="margin-top: 1.5rem; text-align: center;">
+      <a href="teaching.html" class="btn-outline" style="display: inline-flex;"><i class="fas fa-chalkboard"></i> Complete teaching portfolio →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Ongoing projects -->
 <section id="ongoing-projects" data-aos="fade-up">
   <h2 class="section-title"><i class="fas fa-laptop-code"></i> Ongoing research projects</h2>
   <div class="card-flex">
@@ -438,15 +787,41 @@
   </div>
 </section>
 
-<!-- presentations preview -->
+<!-- Presentations section -->
 <section id="presentations" data-aos="fade-up">
-  <div class="card" style="background: #eaf4f6; text-align: center;">
-    <h3><i class="fas fa-chalkboard"></i> Invited presentations & talks</h3>
-    <p><strong>Oct 2025 (Dublin, Ireland):</strong> Presented the paper "Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment" <br> at the conference of ACM Multimedia 2025. Also chaired the Transport and Delivery session.</p>
-    <p><strong>Oct 2025 (Hong Kong):</strong> Presented the paper "EyeNexus: Adaptive Gaze-Driven Quality and Bitrate Streaming for Seamless VR Cloud Gaming Experiences" <br>  at The 21st International Conference on emerging Networking EXperiments and Technologies (CoNEXT).</p>
-    <p><strong>Jul 2023 (Hong Kong):</strong> Presented the paper "Network Traffic in the Metaverse: The Case of Social VR" at SocialMeta Workshop. </p>
-    <p> <strong> Apr 2022 (Lyon):</strong> Presented the paper "Nebula: Reliable Video Transmission" at The Web Conference 2022.</p>
-    <a href="conferences.html" class="btn-outline" style="display: inline-block; margin-top: 0.8rem;">View all talks →</a>
+  <div class="presentations-main-card">
+    <h3 style="font-size: 1.8rem; margin-bottom: 1.2rem;"><i class="fas fa-chalkboard"></i> Invited presentations & talks</h3>
+    <div class="talk-entry">
+      <div class="talk-header">
+        <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Oct 2025 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Dublin, Ireland</div>
+        <span class="talk-venue"><i class="fas fa-building"></i> ACM Multimedia 2025</span>
+      </div>
+      <div class="talk-title">Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment</div>
+    </div>
+    <div class="talk-entry">
+      <div class="talk-header">
+        <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Dec 2025 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Hong Kong, China</div>
+        <span class="talk-venue"><i class="fas fa-globe"></i> ACM CoNEXT 2025</span>
+      </div>
+      <div class="talk-title">EyeNexus: Adaptive Gaze-Driven Quality and Bitrate Streaming for Seamless VR Cloud Gaming Experiences</div>
+    </div>
+    <div class="talk-entry">
+      <div class="talk-header">
+        <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Jul 2023 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Hong Kong, China</div>
+        <span class="talk-venue"><i class="fas fa-chalkboard-user"></i> SocialMeta Workshop</span>
+      </div>
+      <div class="talk-title">Network Traffic in the Metaverse: The Case of Social VR</div>
+    </div>
+    <div class="talk-entry">
+      <div class="talk-header">
+        <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Apr 2022 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Lyon, France</div>
+        <span class="talk-venue"><i class="fas fa-chart-line"></i> The Web Conference (WWW) 2022</span>
+      </div>
+      <div class="talk-title">Nebula: Reliable Low-latency Video Transmission for Mobile Cloud Gaming</div>
+    </div>
+    <div style="margin-top: 1.5rem; text-align: center;">
+      <a href="conferences.html" class="btn-outline"><i class="fas fa-microphone-alt"></i> Full list of talks →</a>
+    </div>
   </div>
 </section>
 
@@ -472,14 +847,7 @@
 
 <footer>
   <p>© 2025 Dr. Ahmad Alhilal — Postdoctoral Researcher @ Aalto University & HKUST alumnus</p>
-  <!-- <div class="social-links">
-    <a href="publications.html"><i class="fas fa-book"></i> Publications</a>
-    <a href="teaching.html"><i class="fas fa-chalkboard"></i> Teaching</a>
-    <a href="news.html"><i class="fas fa-rss"></i> News</a>
-    <a href="projects.html"><i class="fas fa-flask"></i> Projects</a>
-    <a href="honors.html"><i class="fas fa-trophy"></i> Honors</a>
-  </div>
-</footer> -->
+</footer>
 
 <div class="scroll-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></div>
 
@@ -487,7 +855,6 @@
 <script>
   AOS.init({ duration: 700, once: true, offset: 70 });
   
-  // Typing effect (roles)
   const roles = ["Postdoctoral Researcher at Aalto University", "Cloud-rendered XR Gaming", "Adaptive Streaming Researcher", "Postgraduate Research Advisor & Mentor", "Co-lecturer of Multimedia Systems"];
   let idx = 0, charIdx = 0, currentText = "";
   const typingEl = document.getElementById("typed-text");
@@ -514,7 +881,6 @@
   }
   typeEffect();
   
-  // scroll to top button
   const scrollBtn = document.getElementById("scrollTopBtn");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 400) scrollBtn.classList.add("visible");
