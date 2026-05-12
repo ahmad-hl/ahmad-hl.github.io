@@ -456,6 +456,76 @@
       gap: 0.5rem;
       margin-top: 0.5rem;
     }
+    
+    /* NEW: Ongoing projects card (compact research card same as publication/teaching block) */
+    .projects-compact-card {
+      background: #eaf4f6;
+      border-radius: 2rem;
+      padding: 1.8rem;
+    }
+    .project-entry {
+      background: rgba(255, 255, 250, 0.9);
+      border-radius: 1.5rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: 0.2s;
+      border: 1px solid #cfe6ec;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+    .project-entry:hover {
+      background: white;
+      border-color: #9ccbd4;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .project-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      gap: 8px;
+    }
+    .project-institution-badge {
+      background: linear-gradient(105deg, #d9eef1, #cbe5ea);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #115f6e;
+      letter-spacing: -0.2px;
+      border-left: 3px solid #168094;
+    }
+    .project-institution-badge i {
+      font-size: 0.8rem;
+      color: #168094;
+    }
+    .project-year {
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: #d9eef1;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      color: #115f6e;
+    }
+    .project-title {
+      font-weight: 800;
+      font-size: 1rem;
+      color: #0a3b47;
+      margin: 0.5rem 0 0.25rem 0;
+      line-height: 1.4;
+    }
+    .project-detail {
+      font-size: 0.85rem;
+      color: #2a6b7a;
+      margin-top: 0.2rem;
+      line-height: 1.45;
+    }
+    .project-tech-tags {
+      margin-top: 0.6rem;
+    }
     footer {
       text-align: center;
       padding: 2.5rem;
@@ -499,7 +569,7 @@
       .navbar { flex-direction: column; gap: 0.6rem; }
       .nav-links { justify-content: center; gap: 1rem; }
       section { padding: 3rem 1.2rem; }
-      .talk-header, .teaching-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .talk-header, .teaching-header, .project-header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .talk-date-location, .teaching-date-location { white-space: normal; }
     }
   </style>
@@ -574,7 +644,6 @@
   <div class="highlights-compact-card">
     <h3 style="font-size: 1.8rem; margin-bottom: 1rem;"><i class="fas fa-newspaper"></i> Latest highlights</h3>
     
-    <!-- Recent awards -->
     <div class="highlight-entry">
       <div class="highlight-header">
         <div class="highlight-badge"><i class="fas fa-trophy"></i> Recent awards & recognition</div>
@@ -584,7 +653,6 @@
       <div class="highlight-link"><a href="honors.html">View all honors & awards →</a></div>
     </div>
     
-    <!-- Breaking news group -->
     <div class="highlight-entry">
       <div class="highlight-header">
         <div class="highlight-badge"><i class="fas fa-microphone-alt"></i> Breaking news</div>
@@ -603,7 +671,6 @@
   <div class="publication-compact-card">
     <h3 style="font-size: 1.8rem; margin-bottom: 1rem;"><i class="fas fa-book-open"></i> Selected publications</h3>
     
-    <!-- Publication 1 -->
     <div class="pub-entry">
       <div class="pub-header">
         <div class="pub-venue-badge"><i class="fas fa-globe"></i> The Web Conference (WWW)</div>
@@ -612,40 +679,35 @@
       <div class="pub-title">FovRL: Joint Foveation and Quality Control for Immersive VR Streaming</div>
       <div class="pub-authors">Tsui, Wu, Alhilal, Siekkinen, Hui</div>
       
-      <!-- Publication 2 -->
-      <div class="pub-header">
+      <div class="pub-header" style="margin-top: 1rem;">
         <div class="pub-venue-badge"><i class="fas fa-vr-cardboard"></i> IEEE VR</div>
         <span class="pub-year">2026</span>
       </div>
       <div class="pub-title">Frame Complexity-Aware FVE for Real-time High-Quality Streaming</div>
       <div class="pub-authors">Wu, Alhilal, Tsui, Siekkinen, Hui</div>
       
-      <!-- Publication 3 -->
-      <div class="pub-header">
+      <div class="pub-header" style="margin-top: 1rem;">
         <div class="pub-venue-badge"><i class="fas fa-network-wired"></i> ACM CoNEXT</div>
         <span class="pub-year">2025</span>
       </div>
       <div class="pub-title">EyeNexus: Adaptive Gaze-Driven Streaming for VR Cloud Gaming</div>
       <div class="pub-authors">Wu, Alhilal, Tsui, Siekkinen, Hui</div>
       
-      <!-- Publication 4 -->
-      <div class="pub-header">
+      <div class="pub-header" style="margin-top: 1rem;">
         <div class="pub-venue-badge"><i class="fas fa-file-video"></i> ACM Multimedia</div>
         <span class="pub-year">2025</span>
       </div>
       <div class="pub-title">Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment</div>
       <div class="pub-authors">Alhilal, Wu, Kämäräinen, Braud, Siekkinen</div>
 
-      <!-- Publication 5 -->
-      <div class="pub-header">
+      <div class="pub-header" style="margin-top: 1rem;">
         <div class="pub-venue-badge"><i class="fas fa-tachometer-alt"></i> ACM MMSys</div>
         <span class="pub-year">2024</span>
       </div>
       <div class="pub-title">FovOptix: Human Vision-Compatible Encoding in VR Cloud Gaming</div>
       <div class="pub-authors">Alhilal, Wu, Tsui, Hui</div>
 
-      <!-- Publication 6 -->
-      <div class="pub-header">
+      <div class="pub-header" style="margin-top: 1rem;">
         <div class="pub-venue-badge"><i class="fas fa-chart-line"></i> The Web Conference (WWW)</div>
         <span class="pub-year">2022</span>
       </div>
@@ -653,7 +715,6 @@
       <div class="pub-authors">Alhilal, Braud, Han, Hui</div>
     </div>
  
-    
     <div style="margin-top: 1.5rem; text-align: center;">
       <a href="publications.html" class="btn-outline" style="display: inline-flex;"><i class="fas fa-book"></i> Full publication list →</a>
     </div>
@@ -677,7 +738,7 @@
       </div>
       <div class="teaching-title">Lecturer – CS-E4265 Multimedia Systems</div>
 
-            <div class="teaching-header">
+      <div class="teaching-header">
         <div class="teaching-date-location">
           <i class="fas fa-calendar-alt"></i> 2024 
           <span class="separator-dot">•</span> 
@@ -687,7 +748,7 @@
       </div>
       <div class="teaching-title">Guest Lecturer – Extended Reality: Systems, Principles and Design</div>
 
-            <div class="teaching-header">
+      <div class="teaching-header">
         <div class="teaching-date-location">
           <i class="fas fa-calendar-alt"></i> 2016–2017 
           <span class="separator-dot">•</span> 
@@ -697,7 +758,7 @@
       </div>
       <div class="teaching-title">Lecturer – Introduction to Computer Systems</div>
 
-       <div class="teaching-header">
+      <div class="teaching-header">
         <div class="teaching-date-location">
           <i class="fas fa-calendar-alt"></i> 2019–2023 
           <span class="separator-dot">•</span> 
@@ -716,9 +777,7 @@
         <span class="teaching-venue"><i class="fas fa-university"></i> Damascus University / Arab International University</span>
       </div>
       <div class="teaching-title">Teaching Assistant – Network Security, Computer Networks</div>
-
     </div>
-
     
     <div class="teaching-entry" style="margin-top: 0.5rem;">
       <div class="teaching-header">
@@ -752,21 +811,58 @@
   </div>
 </section>
 
-<!-- Ongoing projects -->
+<!-- ========== ONGOING RESEARCH PROJECTS (REFINED) ========= -->
 <section id="ongoing-projects" data-aos="fade-up">
-  <h2 class="section-title"><i class="fas fa-laptop-code"></i> Ongoing research projects</h2>
-  <div class="card-flex">
-    <div class="card">
-      <i class="fas fa-gamepad" style="font-size: 1.8rem; color:#168094;"></i>
-      <h3>Adaptive Bitrate Streaming for XR Cloud Gaming</h3>
-      <p>Develop networked XR system, adaptive XR streaming to network dynamics — Aalto University/HKUST (2023–present).</p>
-      <a href="projects.html" style="color:#168094; font-weight:500;">Learn more →</a>
+  <div class="projects-compact-card">
+    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;"><i class="fas fa-laptop-code"></i> Ongoing research projects</h3>
+    <p style="margin-bottom: 1.2rem; color: #1f6c7a;">Advancing networked XR, cloud gaming, and photorealistic 3D streaming – with institutional highlights.</p>
+    
+    <!-- Project 2: Aalto University -->
+    <div class="project-entry">
+      <div class="project-header">
+        <div class="project-institution-badge">
+          <i class="fas fa-university"></i> Aalto University 
+        </div>
+        <div class="project-year">2025 – present</div>
+      </div>
+      <div class="project-title">Real‑time Rendering & Streaming of Photorealistic 3D Views</div>
+      <div class="project-detail">
+        Leveraging 3D Gaussian Splatting and generative scene representations for real-time novel view synthesis. We design adaptive streaming pipelines that deliver photorealistic immersive scenes to lightweight XR headsets with minimal bandwidth.
+      </div>
+      <div class="project-tech-tags">
+        <span class="interest-tag">3D Gaussian Splatting</span>
+        <span class="interest-tag">NeRF</span>
+        <span class="interest-tag">Splat Streaming</span>
+        <span class="interest-tag">Splat Renering</span>
+        <span class="interest-tag">CUDA</span>
+      </div>
     </div>
-    <div class="card">
-      <i class="fas fa-cubes" style="font-size: 1.8rem; color:#168094;"></i>
-      <h3>Real-time Rendering and Streaming of Photorealistic 3D Views</h3>
-      <p>Leverage 3D Gaussian Splatting for generating novel view synthesis, immersive rendering and adaptive streaming to end devices — Aalto University (2026–present).</p>
-      <a href="projects.html" class="interest-tag">More projects →</a>
+
+    <!-- Project 1: Aalto University & HKUST collaboration  -->
+    <div class="project-entry">
+      <div class="project-header">
+        <div class="project-institution-badge">
+          <i class="fas fa-university"></i> HKUST & Aalto University
+        </div>
+        <div class="project-year">2023 – present</div>
+      </div>
+      <div class="project-title">Adaptive Bitrate Streaming for XR Cloud Gaming</div>
+      <div class="project-detail">
+        Developing low-latency adaptive bitrate algorithms and congestion control for immersive XR cloud gaming. Focus on integrating gaze-driven foveated transport and real-time encoding optimizations for stable quality under fluctuating network conditions.
+      </div>
+      <div class="project-tech-tags">
+        <span class="interest-tag">WebRTC</span>
+        <span class="interest-tag">Foveated Encoding</span>
+        <span class="interest-tag">Foveated Rendering</span>
+        <span class="interest-tag">ALVR</span>
+        <span class="interest-tag">GCC/NADA</span>
+        <span class="interest-tag">NVidia Coding</span>
+      </div>
+    </div>
+    
+    
+    <div style="margin-top: 1.5rem; text-align: center;">
+      <a href="projects.html" class="btn-outline" style="display: inline-flex;"><i class="fas fa-flask"></i> Explore all research projects →</a>
     </div>
   </div>
 </section>
@@ -776,28 +872,24 @@
   <div class="presentations-main-card">
     <h3 style="font-size: 1.8rem; margin-bottom: 1.2rem;"><i class="fas fa-chalkboard"></i> Invited presentations & talks</h3>
     <div class="talk-entry">
-      <!-- Talk 1 -->
       <div class="talk-header">
         <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Oct 2025 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Dublin, Ireland</div>
         <span class="talk-venue"><i class="fas fa-building"></i> ACM Multimedia 2025</span>
       </div>
       <div class="talk-title">Congestion Control for VR Cloud Gaming: Integration and Comparison in Real VR Gaming Environment</div>
 
-      <!-- Talk 2 -->
       <div class="talk-header">
         <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Dec 2025 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Hong Kong, China</div>
         <span class="talk-venue"><i class="fas fa-globe"></i> ACM CoNEXT 2025</span>
       </div>
       <div class="talk-title">EyeNexus: Adaptive Gaze-Driven Quality and Bitrate Streaming for Seamless VR Cloud Gaming Experiences</div>
 
-      <!-- Talk 3 -->
       <div class="talk-header">
         <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Jul 2023 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Hong Kong, China</div>
         <span class="talk-venue"><i class="fas fa-chalkboard-user"></i> SocialMeta Workshop</span>
       </div>
       <div class="talk-title">Network Traffic in the Metaverse: The Case of Social VR</div>
 
-      <!-- Talk 4 -->
       <div class="talk-header">
         <div class="talk-date-location"><i class="fas fa-calendar-alt"></i> Apr 2022 <span class="separator-dot">•</span> <i class="fas fa-map-marker-alt"></i> Lyon, France</div>
         <span class="talk-venue"><i class="fas fa-chart-line"></i> The Web Conference (WWW) 2022</span>
