@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ahmad Alhilal, PhD · Academic Services</title>
+  <link rel="icon" href="ahmad_photo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body {
+      background: #f6fbfc;
+      font-family: 'Inter', sans-serif;
+      color: #11212e;
+      line-height: 1.5;
+    }
+    .navbar {
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,250,0.88);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(0,150,160,0.2);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      font-family: 'Space Grotesk', monospace;
+      background: linear-gradient(120deg, #0f3b5c, #1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e4a5f;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color:#0f7c8c; border-bottom:2px solid #1f9eae; padding-bottom:4px; }
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 2rem 3rem; }
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 1.5rem 0 1rem;
+      background: linear-gradient(135deg,#0a2f44,#1f9eae);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-card {
+      background: white;
+      border-radius: 1.75rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      border: 1px solid #d4eaf0;
+      transition: 0.2s;
+    }
+    .section-card:hover {
+      border-color: #8dc9d4;
+      box-shadow: 0 16px 30px rgba(0,0,0,0.08);
+    }
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #0f3b5c;
+      border-left: 5px solid #1f9eae;
+      padding-left: 1rem;
+    }
+    .section-title i {
+      color: #1f9eae;
+      font-size: 1.6rem;
+    }
+    .role-item {
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #e2f0f3;
+    }
+    .role-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #0f4c5f;
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-venue {
+      font-weight: 600;
+      color: #1f6d7c;
+    }
+    .role-detail {
+      color: #2c5f6e;
+      margin-top: 0.3rem;
+      margin-left: 1.2rem;
+      font-size: 0.9rem;
+    }
+    .location-text {
+      font-size: 0.8rem;
+      color: #1f8a9c;
+      margin-left: 0.25rem;
+      font-weight: 500;
+    }
+    .badge {
+      background: #e2f0f3;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #116b7a;
+    }
+    .reviewer-group {
+      margin-bottom: 1.8rem;
+    }
+    .subgroup-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 1rem 0 0.8rem 0;
+      color: #0f3b5c;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid #cde3e8;
+      padding-bottom: 0.4rem;
+    }
+    .subgroup-title i {
+      color: #1f9eae;
+      font-size: 1.2rem;
+    }
+    .list-events {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .event-item {
+      background: #f8fdfe;
+      border: 1px solid #cde3e8;
+      border-radius: 2rem;
+      padding: 0.3rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #136b7a;
+      transition: 0.1s;
+    }
+    .event-item i {
+      margin-right: 0.4rem;
+      font-size: 0.75rem;
+      color: #1f9eae;
+    }
+    .chair-block {
+      background: linear-gradient(100deg, #eef7fa, white);
+      border-left: 4px solid #1f9eae;
+      padding: 1rem 1.2rem;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+    .inline-icon-small {
+      margin-right: 0.3rem;
+      font-size: 0.8rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e4f2f5;
+      color: #1e5b66;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; gap: 0.6rem; }
+      .container { padding: 0 1.2rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo-container" style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/35?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #1f9eae;">
+        <span class="logo"> Ahmad Alhilal, PhD</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="publications.html">📄 Publications</a></li>
+        <li><a href="teaching.html">👨‍🏫 Teaching</a></li>
+        <li><a href="presentations.html">🎤 Presentations</a></li>
+        <!-- <li><a href="projects.html">💻 Projects</a></li> -->
+         <li><a href="services.html" >📌 Services</a></li>
+        <li><a href="honors.html">🏆 Honors</a></li>
+        <li><a href="video-gallery.html">🎥 Video Gallery</a></li>
+    </ul>
+</nav>
+<div class="container">
+  <h1 class="page-title" data-aos="fade-right"><i class="fas fa-chalkboard-user"></i> Academic Services</h1>
+  
+<!-- ========= SECTION 1: CHAIR ========= -->
+<div class="section-card" data-aos="fade-up">
+  <div class="section-title">
+    <i class="fas fa-gavel"></i> 
+    <span>Chair</span>
+  </div>
+  <div class="role-item">
+    <div class="role-title">
+      <i class="fas fa-microphone-alt" style="color:#1f9eae; margin-right: 0.5rem;"></i> 
+      <span class="role-venue">Doctoral Symposium Chair</span>
+    </div>
+    <div class="role-detail">
+      ACM Multimedia Systems 2026 (MMSys'26) — 
+      <span class="location-text">📍 HKUST, Hong Kong</span>
+    </div>
+  </div>
+  <div class="role-item">
+    <div class="role-title">
+      <i class="fas fa-chalkboard-user" style="color:#1f9eae; margin-right: 0.5rem;"></i> 
+      <span class="role-venue">Session Chair</span>
+    </div>
+    <div class="role-detail">
+      ACM Multimedia 2025 (MM'25) — 
+      <span class="location-text">📍 Dublin, Ireland</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========= SECTION 2: TECHNICAL PROGRAM COMMITTEE (TPC) ========= -->
+<div class="section-card" data-aos="fade-up">
+  <div class="section-title">
+    <i class="fas fa-users"></i>
+    <span>Technical Program Committee (TPC)</span>
+  </div>
+  <div class="role-item">
+    <div class="role-title">
+      <i class="fas fa-globe"></i> 
+      <span class="role-venue">The Web Conference (WWW)</span>
+    </div>
+    <div class="role-detail">Systems and Infrastructure track — WWW 2024, WWW 2025</div>
+  </div>
+  <div class="role-item">
+    <div class="role-title">
+      <i class="fas fa-film"></i> 
+      <span class="role-venue">ACM Multimedia Systems (MMSys)</span>
+    </div>
+    <div class="role-detail">MMSys 2025 — TPC member</div>
+  </div>
+  <div class="role-item">
+    <div class="role-title">
+      <i class="fas fa-user-graduate"></i> 
+      <span class="role-venue">Ph.D. Student Symposium</span>
+    </div>
+    <div class="role-detail">International Conference on Distributed Computing Systems (ICDCS) 2023</div>
+  </div>
+</div>
+
+  <!-- ========= SECTION 3: REVIEWER (split into Conferences + Journals/Magazines) ========= -->
+  <div class="section-card" data-aos="fade-up">
+    <div class="section-title">
+      <i class="fas fa-pen-fancy"></i>
+      <span>Reviewer</span>
+    </div>
+    
+    <!-- Conferences group -->
+    <div class="reviewer-group">
+      <div class="subgroup-title">
+        <i class="fas fa-book-open"></i> Conferences
+      </div>
+      <div class="list-events">
+        <span class="event-item"><i class="fas fa-check-circle"></i> The ACM Web Conference (WWW) 2024, 2025</span>
+        <span class="event-item"><i class="fas fa-check-circle"></i> ACM Multimedia Systems (MMSys) 2024, 2025</span>
+        <span class="event-item"><i class="fas fa-check-circle"></i> ACM Multimedia (ACM MM) 2023, 2024, 2025</span>
+        <span class="event-item"><i class="fas fa-check-circle"></i> IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR) 2025</span>
+        <span class="event-item"><i class="fas fa-check-circle"></i> IEEE International Conference on Pervasive Computing and Communications (PerCom) 2023, 2024</span>
+      </div>
+    </div>
+    
+    <!-- Journals & Magazines group -->
+    <div class="reviewer-group">
+      <div class="subgroup-title">
+        <i class="fas fa-book-open"></i> Journals & Magazines
+      </div>
+      <div class="list-events">
+        <span class="event-item"><i class="fas fa-newspaper"></i> IEEE Communications Magazine</span>
+        <span class="event-item"><i class="fas fa-car"></i> IEEE Vehicular Technology Magazine</span>
+        <span class="event-item"><i class="fas fa-network-wired"></i> IEEE Network Magazine</span>
+        <span class="event-item"><i class="fas fa-microchip"></i> IEEE Internet of Things Magazine</span>
+        <span class="event-item"><i class="fas fa-microchip"></i> IEEE Access</span>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2025 Dr. Ahmad Alhilal — serving the research community through chair roles, TPC memberships, and reviewing for leading conferences and journals.</p>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 400, once: true, offset: 10 });
+</script>
+</body>
+</html>
