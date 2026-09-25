@@ -118,6 +118,81 @@
       .navbar { flex-direction: column; gap: 0.6rem; }
       .container { padding: 0 1.2rem 2rem; }
     }
+
+    :root {
+      --bg: #071a2a;
+      --bg-alt: #0e2235;
+      --card: rgba(16, 35, 47, 0.82);
+      --text: #edf9ff;
+      --muted: #bed2dd;
+      --primary: #38d5df;
+      --secondary: #7b6ef6;
+      --border: rgba(130, 208, 228, 0.18);
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(56, 213, 223, 0.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(123, 110, 246, 0.12), transparent 28%),
+        linear-gradient(180deg, #071a2a 0%, #0d2235 100%);
+      color: var(--text);
+    }
+
+    .navbar {
+      background: rgba(7, 18, 27, 0.78);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .nav-links a {
+      color: #ebf9ff;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .page-title,
+    .talk-title,
+    .section-title {
+      color: #f3fbff;
+      background: linear-gradient(90deg, #ebf8ff 0%, #7ae7f6 45%, #b9adff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .talk-card,
+    .timeline,
+    .presentation-card,
+    .talk-entry {
+      background: linear-gradient(180deg, rgba(15, 35, 47, 0.9), rgba(9, 22, 31, 0.9));
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      box-shadow: 0 18px 30px -18px rgba(0, 0, 0, 0.4);
+    }
+
+    .talk-date,
+    .talk-venue,
+    .location-pill {
+      background: rgba(56, 213, 223, 0.12);
+      border: 1px solid rgba(56, 213, 223, 0.18);
+      color: var(--primary);
+    }
+
+    .talk-detail,
+    .talk-desc,
+    .venue-text,
+    .talk-venue {
+      color: var(--muted);
+    }
+
+    footer {
+      background: rgba(8, 22, 31, 0.9);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>

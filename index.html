@@ -572,6 +572,176 @@
       .talk-header, .teaching-header, .project-header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .talk-date-location, .teaching-date-location { white-space: normal; }
     }
+
+    :root {
+      --bg: #071a2a;
+      --bg-alt: #0e2235;
+      --bg-soft: #102f40;
+      --panel: rgba(12, 28, 39, 0.8);
+      --panel-strong: rgba(17, 37, 49, 0.94);
+      --card: rgba(16, 35, 47, 0.82);
+      --card-strong: #f4fbff;
+      --text: #edf9ff;
+      --muted: #bed2dd;
+      --primary: #38d5df;
+      --secondary: #7b6ef6;
+      --accent: #f4c76d;
+      --border: rgba(130, 208, 228, 0.18);
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(56, 213, 223, 0.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(123, 110, 246, 0.12), transparent 28%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+      color: var(--text);
+    }
+
+    .navbar {
+      background: rgba(7, 18, 27, 0.78);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-links a {
+      color: #ebf9ff;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .logo {
+      color: transparent;
+    }
+
+    .hero {
+      background: radial-gradient(circle at center, rgba(56,213,223,0.08), transparent 40%);
+    }
+
+    .section-title,
+    .page-title,
+    .hero-content h1,
+    .tab-title,
+    .pub-title,
+    .talk-title,
+    .teaching-title,
+    .project-title,
+    .highlight-title,
+    .award-title,
+    .title {
+      color: #f4fbff;
+      background: linear-gradient(90deg, #ebf8ff 0%, #7ae7f6 45%, #b9adff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section-title:after {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    .card,
+    .section-card,
+    .publication-compact-card,
+    .highlights-compact-card,
+    .presentations-main-card,
+    .teaching-card-compact,
+    .projects-compact-card,
+    .pub-entry,
+    .highlight-entry,
+    .talk-entry,
+    .teaching-entry,
+    .project-entry,
+    .award-card,
+    .video-card {
+      background: linear-gradient(180deg, rgba(15, 35, 47, 0.9), rgba(9, 22, 31, 0.9));
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 30px -18px rgba(0, 0, 0, 0.4);
+    }
+
+    .card:hover,
+    .section-card:hover,
+    .pub-entry:hover,
+    .highlight-entry:hover,
+    .talk-entry:hover,
+    .teaching-entry:hover,
+    .project-entry:hover,
+    .award-card:hover,
+    .video-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 213, 223, 0.42);
+      box-shadow: 0 20px 38px -20px rgba(0, 0, 0, 0.45);
+    }
+
+    .interest-tag,
+    .tag,
+    .year-badge,
+    .pub-venue-badge,
+    .highlight-badge,
+    .project-institution-badge,
+    .talk-date-location,
+    .teaching-date-location,
+    .project-year,
+    .highlight-date,
+    .talk-venue,
+    .teaching-venue {
+      background: rgba(56, 213, 223, 0.12);
+      border: 1px solid rgba(56, 213, 223, 0.18);
+      color: var(--primary);
+      backdrop-filter: blur(6px);
+    }
+
+    .pub-authors,
+    .venue,
+    .highlight-detail,
+    .talk-detail,
+    .teaching-detail,
+    .project-detail,
+    .award-detail,
+    .video-venue,
+    .detail,
+    .page-subtitle,
+    .role-detail {
+      color: var(--muted);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #2fa4c9);
+      color: #041a26;
+      box-shadow: 0 12px 24px rgba(56, 213, 223, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #59e1eb, #3cc5dc);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(56, 213, 223, 0.42);
+      color: var(--primary);
+      background: rgba(56, 213, 223, 0.04);
+    }
+
+    .btn-outline:hover {
+      background: rgba(56, 213, 223, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .highlight-link a,
+    .links a,
+    .social-links a,
+    .video-venue a {
+      color: var(--primary);
+    }
+
+    footer {
+      background: rgba(8, 22, 31, 0.9);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
   </style>
 </head>
 <body class="gradient-bg">
