@@ -574,52 +574,52 @@
     }
 
     :root {
-      --bg: #071a2a;
-      --bg-alt: #0e2235;
-      --bg-soft: #102f40;
-      --panel: rgba(12, 28, 39, 0.8);
-      --panel-strong: rgba(17, 37, 49, 0.94);
-      --card: rgba(16, 35, 47, 0.82);
-      --card-strong: #f4fbff;
-      --text: #edf9ff;
-      --muted: #bed2dd;
-      --primary: #38d5df;
-      --secondary: #7b6ef6;
-      --accent: #f4c76d;
-      --border: rgba(130, 208, 228, 0.18);
-      --shadow: rgba(0, 0, 0, 0.35);
+      --bg: #f6fbff;
+      --bg-2: #eef9ff;
+      --card: #ffffff;
+      --card-soft: #f9fdff;
+      --text: #18364d;
+      --muted: #587086;
+      --primary: #2eb9d0;
+      --primary-deep: #1f8aa3;
+      --secondary: #f4b13c;
+      --secondary-soft: #fff0c7;
+      --accent: #f77c5a;
+      --border: rgba(20, 70, 94, 0.12);
+      --shadow: rgba(18, 50, 73, 0.12);
     }
 
     body {
       background:
-        radial-gradient(circle at top left, rgba(56, 213, 223, 0.14), transparent 24%),
-        radial-gradient(circle at top right, rgba(123, 110, 246, 0.12), transparent 28%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+        radial-gradient(circle at top left, rgba(46, 185, 208, 0.14), transparent 22%),
+        radial-gradient(circle at top right, rgba(244, 177, 60, 0.12), transparent 26%),
+        linear-gradient(180deg, #fffdf8 0%, #f3fbff 28%, #edf9ff 100%);
       color: var(--text);
     }
 
     .navbar {
-      background: rgba(7, 18, 27, 0.78);
+      background: rgba(255, 255, 255, 0.8);
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 18px 32px -24px rgba(27, 76, 98, 0.28);
       backdrop-filter: blur(16px);
     }
 
     .nav-links a {
-      color: #ebf9ff;
+      color: var(--text);
     }
 
     .nav-links a:hover {
-      color: var(--primary);
+      color: var(--primary-deep);
       border-bottom-color: var(--primary);
     }
 
     .logo {
-      color: transparent;
+      color: var(--text);
+      background: none;
     }
 
     .hero {
-      background: radial-gradient(circle at center, rgba(56,213,223,0.08), transparent 40%);
+      background: radial-gradient(circle at center, rgba(46, 185, 208, 0.10), transparent 42%);
     }
 
     .section-title,
@@ -632,9 +632,9 @@
     .project-title,
     .highlight-title,
     .award-title,
-    .title {
-      color: #f4fbff;
-      background: linear-gradient(90deg, #ebf8ff 0%, #7ae7f6 45%, #b9adff 100%);
+    .title,
+    .video-title {
+      background: linear-gradient(135deg, #18364d 0%, #2eb9d0 42%, #f4b13c 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -657,10 +657,14 @@
     .teaching-entry,
     .project-entry,
     .award-card,
-    .video-card {
-      background: linear-gradient(180deg, rgba(15, 35, 47, 0.9), rgba(9, 22, 31, 0.9));
+    .video-card,
+    .talk-card,
+    .role-item,
+    .project-item,
+    .entry {
+      background: linear-gradient(180deg, #ffffff, #f8fdff);
       border: 1px solid var(--border);
-      box-shadow: 0 18px 30px -18px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 36px -26px rgba(27, 76, 98, 0.22);
     }
 
     .card:hover,
@@ -671,10 +675,14 @@
     .teaching-entry:hover,
     .project-entry:hover,
     .award-card:hover,
-    .video-card:hover {
+    .video-card:hover,
+    .talk-card:hover,
+    .role-item:hover,
+    .project-item:hover,
+    .entry:hover {
       transform: translateY(-4px);
-      border-color: rgba(56, 213, 223, 0.42);
-      box-shadow: 0 20px 38px -20px rgba(0, 0, 0, 0.45);
+      border-color: rgba(46, 185, 208, 0.34);
+      box-shadow: 0 24px 42px -30px rgba(27, 76, 98, 0.28);
     }
 
     .interest-tag,
@@ -688,10 +696,14 @@
     .project-year,
     .highlight-date,
     .talk-venue,
-    .teaching-venue {
-      background: rgba(56, 213, 223, 0.12);
-      border: 1px solid rgba(56, 213, 223, 0.18);
-      color: var(--primary);
+    .teaching-venue,
+    .talk-date,
+    .location-pill,
+    .project-date,
+    .role-venue {
+      background: linear-gradient(135deg, rgba(46, 185, 208, 0.12), rgba(244, 177, 60, 0.14));
+      border: 1px solid rgba(46, 185, 208, 0.2);
+      color: var(--primary-deep);
       backdrop-filter: blur(6px);
     }
 
@@ -705,40 +717,47 @@
     .video-venue,
     .detail,
     .page-subtitle,
-    .role-detail {
+    .role-detail,
+    .talk-desc,
+    .venue-text,
+    .project-desc,
+    .role-detail,
+    .award-detail,
+    .video-info {
       color: var(--muted);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #2fa4c9);
-      color: #041a26;
-      box-shadow: 0 12px 24px rgba(56, 213, 223, 0.22);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #ffffff;
+      box-shadow: 0 12px 24px rgba(46, 185, 208, 0.18);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, #59e1eb, #3cc5dc);
+      filter: brightness(1.06);
     }
 
     .btn-outline {
-      border: 1px solid rgba(56, 213, 223, 0.42);
-      color: var(--primary);
-      background: rgba(56, 213, 223, 0.04);
+      border: 1px solid rgba(46, 185, 208, 0.38);
+      color: var(--primary-deep);
+      background: rgba(46, 185, 208, 0.04);
     }
 
     .btn-outline:hover {
-      background: rgba(56, 213, 223, 0.08);
+      background: rgba(46, 185, 208, 0.08);
       transform: translateY(-2px);
     }
 
     .highlight-link a,
     .links a,
     .social-links a,
-    .video-venue a {
-      color: var(--primary);
+    .video-venue a,
+    .link a {
+      color: var(--primary-deep);
     }
 
     footer {
-      background: rgba(8, 22, 31, 0.9);
+      background: linear-gradient(180deg, #f4fbff, #edf7ff);
       border-top: 1px solid var(--border);
       color: var(--muted);
     }
