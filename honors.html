@@ -11,14 +11,14 @@
   <style>
     * { margin:0; padding:0; box-sizing: border-box; }
     body {
-      background: #f6fbfc;
+      background: #f3f3f3;
       font-family: 'Inter', sans-serif;
-      color: #11212e;
+      color: #111111;
       line-height: 1.5;
     }
     .navbar {
       backdrop-filter: blur(16px);
-      background: rgba(255,255,250,0.88);
+      background: rgba(255,255,255,0.94);
       position: sticky;
       top: 0;
       width: 100%;
@@ -28,16 +28,13 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      border-bottom: 1px solid rgba(0,150,160,0.2);
+      border-bottom: 1px solid rgba(17,17,17,0.12);
     }
     .logo {
       font-weight: 800;
       font-size: 1.4rem;
       font-family: 'Space Grotesk', monospace;
-      background: linear-gradient(120deg, #0f3b5c, #1f9eae);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+      color: #111111;
     }
     .nav-links {
       display: flex;
@@ -48,20 +45,17 @@
     .nav-links a {
       text-decoration: none;
       font-weight: 600;
-      color: #1e4a5f;
+      color: #2a2a2a;
       font-size: 0.9rem;
       transition: 0.2s;
     }
-    .nav-links a:hover { color:#0f7c8c; border-bottom:2px solid #1f9eae; padding-bottom:4px; }
+    .nav-links a:hover { color:#111111; border-bottom:2px solid #111111; padding-bottom:4px; }
     .container { max-width: 1000px; margin: 2rem auto; padding: 0 2rem 3rem; }
     .page-title {
       font-size: 2.5rem;
       font-weight: 800;
       margin: 1.5rem 0 1rem;
-      background: linear-gradient(135deg,#0a2f44,#1f9eae);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+      color: #111111;
     }
     .award-grid {
       display: flex;
@@ -77,17 +71,17 @@
       gap: 1.2rem;
       flex-wrap: wrap;
       box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-      border: 1px solid #d9eef2;
+      border: 1px solid #d9d9d9;
       transition: all 0.2s ease;
     }
     .award-card:hover {
       transform: translateX(6px);
-      border-color: #9ad4df;
+      border-color: #666666;
       box-shadow: 0 14px 26px -10px rgba(0,0,0,0.08);
     }
     .award-icon {
       font-size: 2.3rem;
-      color: #1f9eae;
+      color: #2d2d2d;
       width: 60px;
       text-align: center;
     }
@@ -97,24 +91,24 @@
     .award-title {
       font-weight: 800;
       font-size: 1.2rem;
-      color: #0a2f44;
+      color: #111111;
       margin-bottom: 0.2rem;
     }
     .award-detail {
       font-size: 0.85rem;
-      color: #3c7b8a;
+      color: #4a4a4a;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 0.2rem;
     }
     .year-badge {
-      background: #e2f0f3;
+      background: #ededed;
       padding: 0.2rem 0.8rem;
       border-radius: 30px;
       font-weight: 600;
       font-size: 0.7rem;
-      color: #146c7a;
+      color: #2d2d2d;
       display: inline-block;
     }
     footer {
@@ -131,61 +125,58 @@
     }
 
     :root {
-      --bg: #f6fbff;
-      --bg-2: #eef9ff;
-      --card: #ffffff;
-      --card-soft: #f9fdff;
-      --text: #18364d;
-      --muted: #587086;
-      --primary: #2eb9d0;
-      --primary-deep: #1f8aa3;
-      --secondary: #f4b13c;
-      --border: rgba(20, 70, 94, 0.12);
-      --shadow: rgba(18, 50, 73, 0.12);
+      --bg: #f3f3f3;
+      --bg-soft: #efefef;
+      --panel: #ffffff;
+      --panel-alt: #f8f8f8;
+      --text: #111111;
+      --muted: #5a5a5a;
+      --primary: #111111;
+      --primary-soft: #f1f1f1;
+      --accent: #424242;
+      --accent-soft: #ececec;
+      --line: #d9d9d9;
+      --shadow: rgba(17, 17, 17, 0.08);
     }
 
     body {
-      background:
-        radial-gradient(circle at top left, rgba(46, 185, 208, 0.14), transparent 22%),
-        radial-gradient(circle at top right, rgba(244, 177, 60, 0.12), transparent 26%),
-        linear-gradient(180deg, #fffdf8 0%, #f3fbff 28%, #edf9ff 100%);
+      background: var(--bg);
       color: var(--text);
     }
 
     .navbar {
-      background: rgba(255, 255, 255, 0.8);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 18px 32px -24px rgba(27, 76, 98, 0.28);
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(17, 17, 17, 0.05);
     }
 
     .nav-links a {
       color: var(--text);
+      font-weight: 600;
     }
 
     .nav-links a:hover {
-      color: var(--primary-deep);
-      border-bottom-color: var(--primary);
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 
     .page-title,
     .award-title {
-      background: linear-gradient(135deg, #18364d 0%, #2eb9d0 42%, #f4b13c 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      color: var(--primary);
+      background: none;
     }
 
     .award-card {
-      background: linear-gradient(180deg, #ffffff, #f8fdff);
-      border: 1px solid var(--border);
-      box-shadow: 0 20px 36px -26px rgba(27, 76, 98, 0.22);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px var(--shadow);
     }
 
     .award-icon,
     .year-badge {
-      color: var(--primary-deep);
-      background: linear-gradient(135deg, rgba(46,185,208,0.12), rgba(244,177,60,0.14));
-      border: 1px solid rgba(46, 185, 208, 0.2);
+      color: var(--primary);
+      background: var(--accent-soft);
+      border: 1px solid #cfe5ef;
     }
 
     .award-detail {
@@ -193,8 +184,8 @@
     }
 
     footer {
-      background: linear-gradient(180deg, #f4fbff, #edf7ff);
-      border-top: 1px solid var(--border);
+      background: #edf4f8;
+      border-top: 1px solid var(--line);
       color: var(--muted);
     }
   </style>
@@ -202,7 +193,7 @@
 <body>
 <nav class="navbar">
     <div class="logo-container">
-        <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/28?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #1f9eae;">
+        <img class="profile-photo" src="Ahmad_Photo.jpg" alt="Dr. Ahmad Alhilal" onerror="this.onerror=null; this.src='https://via.placeholder.com/28?text=A';" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 1.5px solid #3d3d3d;">
     	<span class="logo"> Ahmad Alhilal, PhD</span>
   </div>
   <ul class="nav-links">
